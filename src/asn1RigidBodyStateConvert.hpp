@@ -11,7 +11,7 @@
 #ifndef ASN1RIGIDBODYSTATECONVERT_HPP
 #define ASN1RIGIDBODYSTATECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/samples/RigidBodyState.hpp"
 
 // Conversion functions

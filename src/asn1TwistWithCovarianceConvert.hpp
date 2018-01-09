@@ -11,7 +11,7 @@
 #ifndef ASN1TWISTWITHCOVARIANCECONVERT_HPP
 #define ASN1TWISTWITHCOVARIANCECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/TwistWithCovariance.hpp"
 
 // Conversion functions

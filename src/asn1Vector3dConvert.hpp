@@ -11,7 +11,7 @@
 #ifndef ASN1VECTOR3DCONVERT_HPP
 #define ASN1VECTOR3DCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Eigen.hpp"
 
 // Conversion functions

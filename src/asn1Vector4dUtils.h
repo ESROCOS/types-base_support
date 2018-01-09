@@ -16,7 +16,7 @@ extern "C"
 {
 #endif
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 
 // Creation
 asn1SccVector4d Vector4d_create(double x, double y, double z, double w);

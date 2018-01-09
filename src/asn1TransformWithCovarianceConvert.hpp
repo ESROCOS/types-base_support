@@ -11,7 +11,7 @@
 #ifndef ASN1TRANSFORMWITHCOVARIANCECONVERT_HPP
 #define ASN1TRANSFORMWITHCOVARIANCECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/TransformWithCovariance.hpp"
 
 // Conversion functions

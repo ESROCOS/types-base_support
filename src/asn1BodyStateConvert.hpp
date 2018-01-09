@@ -11,7 +11,7 @@
 #ifndef ASN1BODYSTATECONVERT_HPP
 #define ASN1BODYSTATECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/samples/BodyState.hpp"
 
 // Conversion functions

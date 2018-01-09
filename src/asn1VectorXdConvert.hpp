@@ -12,7 +12,7 @@
 #define ASN1VECTORXDCONVERT_HPP
 
 #include <base/Eigen.hpp>
-#include "asn1Types.h"
+#include "baseTypes.h"
 
 // Templated versions for instances of the type T-StringN (parametrized size)
 template <typename T>

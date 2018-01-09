@@ -11,7 +11,7 @@
 #ifndef ASN1STRINGCONVERT_HPP
 #define ASN1STRINGCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "asn1StringUtils.h"
 #include <string>
 

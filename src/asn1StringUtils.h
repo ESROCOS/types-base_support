@@ -16,7 +16,7 @@ extern "C"
 {
 #endif
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include <string.h>
 #include <stdio.h>
 

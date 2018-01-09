@@ -11,7 +11,7 @@
 #ifndef ASN1POSECONVERT_HPP
 #define ASN1POSECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Pose.hpp"
 
 // Conversion functions

@@ -11,7 +11,7 @@
 #ifndef ASN1TEMPERATURECONVERT_HPP
 #define ASN1TEMPERATURECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Temperature.hpp"
 
 // Conversion functions

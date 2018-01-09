@@ -11,7 +11,7 @@
 #ifndef ASN1TIMECONVERT_HPP
 #define ASN1TIMECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Time.hpp"
 
 // Conversion functions

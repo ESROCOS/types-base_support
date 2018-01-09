@@ -16,7 +16,7 @@ extern "C"
 {
 #endif
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 
 // Element access; matrixes stored in Column-Major order (default in Eigen)
 inline static double Matrix6d_get(const asn1SccMatrix6d* asn, int i, int j)

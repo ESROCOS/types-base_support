@@ -11,7 +11,7 @@
 #ifndef ASN1ORIENTATIONCONVERT_HPP
 #define ASN1ORIENTATIONCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Pose.hpp"
 
 // Conversion functions

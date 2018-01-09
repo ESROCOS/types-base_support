@@ -11,7 +11,7 @@
 #ifndef ASN1MOTION2DCONVERT_HPP
 #define ASN1MOTION2DCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/commands/Motion2D.hpp"
 
 // Conversion functions

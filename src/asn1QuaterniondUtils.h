@@ -16,7 +16,7 @@ extern "C"
 {
 #endif
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 
 // Creation
 asn1SccQuaterniond Quaterniond_create(double w, double x, double y, double z);

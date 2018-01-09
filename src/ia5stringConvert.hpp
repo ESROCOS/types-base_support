@@ -11,7 +11,7 @@
 #ifndef IA5STRINGCONVERT_HPP
 #define IA5STRINGCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include <string>
 
 // Conversion functions: IA5Strings are converted to char[] by the ASN.1 compiler

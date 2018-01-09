@@ -11,7 +11,7 @@
 #ifndef ASN1JOINTSCONVERT_HPP
 #define ASN1JOINTSCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/samples/Joints.hpp"
 
 // Conversion functions

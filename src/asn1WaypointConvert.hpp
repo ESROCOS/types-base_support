@@ -11,7 +11,7 @@
 #ifndef ASN1WAYPOINTCONVERT_HPP
 #define ASN1WAYPOINTCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Waypoint.hpp"
 
 // Conversion functions

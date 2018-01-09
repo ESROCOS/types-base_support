@@ -11,7 +11,7 @@
 #ifndef ASN1MATRIX6DCONVERT_HPP
 #define ASN1MATRIX6DCONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Eigen.hpp"
 
 // Conversion functions

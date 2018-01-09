@@ -11,7 +11,7 @@
 #ifndef ASN1JOINTSTATECONVERT_HPP
 #define ASN1JOINTSTATECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/JointState.hpp"
 
 // Conversion functions

@@ -11,7 +11,7 @@
 #ifndef ASN1ANGLECONVERT_HPP
 #define ASN1ANGLECONVERT_HPP
 
-#include "asn1Types.h"
+#include "baseTypes.h"
 #include "base/Angle.hpp"
 
 // Conversion functions
