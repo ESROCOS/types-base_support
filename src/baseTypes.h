@@ -19,6 +19,7 @@
 // We distingush between the two cases by checking the include variable
 #ifndef _INC_DATAVIEW_UNIQ_H
 #ifndef GENERATED_ASN1_DATAVIEW_UNIQ_H
+#ifndef GENERATED_ASN1SCC_DATAVIEW_UNIQ_H
 #include "asn1/asn1crt.h"
 #include "asn1/Angle.h"
 #include "asn1/BodyState.h"
@@ -47,6 +48,7 @@
 #include "asn1/asn1crt.h"
 #include "asn1/taste-extended.h"
 #include "asn1/taste-types.h"
+#endif //GENERATED_ASN1SCC_DATAVIEW_UNIQ_H
 #endif //GENERATED_ASN1_DATAVIEW_UNIQ_H
 #endif //_INC_DATAVIEW_UNIQ_H
 

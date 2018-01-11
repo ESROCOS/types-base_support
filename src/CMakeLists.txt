@@ -63,7 +63,6 @@ set(HEADERS
     asn1TimeConvert.hpp
     asn1TwistWithCovarianceConvert.hpp
     asn1TransformWithCovarianceConvert.hpp
-    asn1Utils.h
     asn1Vector3dConvert.hpp
     asn1Vector3dUtils.h
     asn1Vector4dConvert.hpp
@@ -73,6 +72,7 @@ set(HEADERS
     asn1Vector6dUtils.h
     asn1WaypointConvert.hpp
     baseTypes.h
+    baseUtils.h
     ia5stringConvert.hpp
     )
 
