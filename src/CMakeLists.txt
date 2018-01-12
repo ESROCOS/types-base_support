@@ -2,8 +2,7 @@
 # Company: GMV Aerospace & Defence S.A.U.
 # Licence: GPLv2
 
-
-pkg_search_module(EIGEN3 REQUIRED eigen3)
+set(LIB ${CMAKE_PROJECT_NAME})
 
 set(SOURCES
     asn1AngleConvert.cpp
@@ -77,30 +76,34 @@ set(HEADERS
     )
 
 # ASN.1 types are imported and compiled locally to the project, but not installed
-esrocos_asn1_types_package(base_support_local_types
+esrocos_asn1_types_package(${LIB}_local_types
     OUTDIR asn1
     IMPORT types/base)
     
+# Find libraries in ESROCOS' install directory
+link_directories(${CMAKE_INSTALL_PREFIX}/lib)
+
 # Target library
-add_library(esrocos_types_base_support SHARED ${SOURCES})
-set_target_properties(esrocos_types_base_support PROPERTIES LINKER_LANGUAGE CXX)
-target_include_directories(esrocos_types_base_support PUBLIC 
-   PUBLIC ${EIGEN3_INCLUDE_DIRS}
-   PUBLIC ${CMAKE_INSTALL_PREFIX}/include
+add_library(${LIB} SHARED ${SOURCES})
+set_target_properties(${LIB} PROPERTIES LINKER_LANGUAGE CXX)
+esrocos_pkgconfig_dependency(${LIB}
+    eigen3
+)
+target_include_directories(${LIB} PUBLIC 
    PRIVATE ${CMAKE_CURRENT_BINARY_DIR}
 )
-add_dependencies(esrocos_types_base_support base_support_local_types_generate_c)
+add_dependencies(${LIB} ${LIB}_local_types)
 
 # Install headers, libraries and pkg-config file
 install(FILES ${HEADERS}
         DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${CMAKE_PROJECT_NAME}
 )
         
-install(TARGETS esrocos_types_base_support
+install(TARGETS ${LIB}
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
 )
 
-CONFIGURE_FILE("esrocos_types_base_support.pc.in" "esrocos_types_base_support.pc" @ONLY)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/esrocos_types_base_support.pc
+CONFIGURE_FILE("${LIB}.pc.in" "${LIB}.pc" @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${LIB}.pc
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig
 )
