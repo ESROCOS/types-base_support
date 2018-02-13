@@ -17,14 +17,14 @@
 void Joints_fromAsn1(base::samples::Joints& result, const asn1SccJoints& asnVal)
 {
     Time_fromAsn1(result.time, asnVal.timestamp);
-    array_from_asn1_string(result.names, asnVal.names.nCount, asnVal.names.arr, jointsNameLength);
+    array_from_asn1_string(result.names, asnVal.names.nCount, asnVal.names.arr, maxSize_T_String);
     array_from_asn1_func(result.elements, asnVal.elements.nCount, asnVal.elements.arr, JointState_fromAsn1);
 }
 
 void Joints_toAsn1(asn1SccJoints& result, const base::samples::Joints& baseObj)
 {
     Time_toAsn1(result.timestamp, baseObj.time);
-    array_to_asn1_string(&result.names.nCount, result.names.arr, baseObj.names, jointsNameLength, "Joints names");
+    array_to_asn1_string(&result.names.nCount, result.names.arr, baseObj.names, maxSize_T_String, "Joints names");
     array_to_asn1_func(&result.elements.nCount, result.elements.arr, baseObj.elements, JointState_toAsn1, "Joints elements");
 }
 

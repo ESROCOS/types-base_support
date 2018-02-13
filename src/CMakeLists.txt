@@ -9,6 +9,7 @@ set(SOURCES
     asn1BodyStateConvert.cpp
     asn1JointsConvert.cpp
     asn1JointStateConvert.cpp
+    asn1JointsTrajectoryConvert.cpp
     asn1Matrix3dConvert.cpp
     asn1Matrix4dConvert.cpp
     asn1Matrix6dConvert.cpp
@@ -43,6 +44,7 @@ set(HEADERS
     asn1BodyStateConvert.hpp
     asn1JointsConvert.hpp
     asn1JointStateConvert.hpp
+    asn1JointsTrajectoryConvert.hpp
     asn1Matrix3dConvert.hpp
     asn1Matrix3dUtils.h
     asn1Matrix4dConvert.hpp
