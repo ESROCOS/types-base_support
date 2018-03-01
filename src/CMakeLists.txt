@@ -89,7 +89,8 @@ set_target_properties(${LIB} PROPERTIES LINKER_LANGUAGE CXX)
 esrocos_pkgconfig_dependency(${LIB}
     eigen3
 )
-target_include_directories(${LIB} PUBLIC 
+target_include_directories(${LIB} 
+   PUBLIC ${CMAKE_INSTALL_PREFIX}/include
    PRIVATE ${CMAKE_CURRENT_BINARY_DIR}
 )
 add_dependencies(${LIB} ${LIB}_local_types)
