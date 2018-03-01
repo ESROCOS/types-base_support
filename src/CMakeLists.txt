@@ -81,6 +81,9 @@ set(HEADERS
 esrocos_asn1_types_package(${LIB}_local_types
     OUTDIR asn1
     IMPORT types/base)
+
+# Find headers in ESROCOS' install directory
+include_directories(${CMAKE_INSTALL_PREFIX}/include)
     
 # Find libraries in ESROCOS' install directory
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
