@@ -26,7 +26,7 @@ void asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_fromAsn1(st
 
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_JointTransform; i++)
     {
-        result[i] = asnVal.arr[i];
+		asn1SccBase_JointTransform_m_fromAsn1(result[i], asnVal.arr[i]);
     }
 }
 

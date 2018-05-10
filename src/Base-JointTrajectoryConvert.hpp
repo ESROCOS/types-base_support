@@ -26,7 +26,7 @@ void asn1SccBase_JointTrajectory_fromAsn1(std::vector<base::JointState>& result,
 
     for (int i = 0; i < length_numBase_JointTrajectory; i++)
     {
-        result[i] = asnVal.arr[i];
+		asn1SccBase_JointState_fromAsn1(result[i], asnVal.arr[i]);
     }
 }
 

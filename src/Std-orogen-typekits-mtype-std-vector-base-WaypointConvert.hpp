@@ -26,7 +26,7 @@ void asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_fromAsn1(std::vec
 
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint; i++)
     {
-        result[i] = asnVal.arr[i];
+		asn1SccBase_Waypoint_m_fromAsn1(result[i], asnVal.arr[i]);
     }
 }
 

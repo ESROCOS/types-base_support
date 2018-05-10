@@ -26,7 +26,7 @@ void asn1SccStd_vector_Wrappers_Vector4d_fromAsn1(std::vector<wrappers::Matrix<d
 
     for (int i = 0; i < length_numStd_vector_Wrappers_Vector4d; i++)
     {
-        result[i] = asnVal.arr[i];
+		asn1SccWrappers_Vector4d_fromAsn1(result[i], asnVal.arr[i]);
     }
 }
 

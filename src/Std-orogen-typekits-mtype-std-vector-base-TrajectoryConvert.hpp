@@ -26,7 +26,7 @@ void asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_fromAsn1(std::v
 
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Trajectory; i++)
     {
-        result[i] = asnVal.arr[i];
+		asn1SccBase_Trajectory_m_fromAsn1(result[i], asnVal.arr[i]);
     }
 }
 
