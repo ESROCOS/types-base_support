@@ -12,6 +12,7 @@
 #define BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-JointTransformConvert.hpp"

@@ -12,6 +12,7 @@
 #define BASE_SAMPLES_WRENCHES_M_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "T-StringConvert.hpp"
 #include "Std-orogen-typekits-mtype-std-vector-base-WrenchConvert.hpp"

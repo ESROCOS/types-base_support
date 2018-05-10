@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/TwistWithCovariance.hpp>
 #include <base/TwistWithCovariance.hpp>
+#include <string.h>
 
 
 

@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/samples/BodyState.hpp>
 #include <base/samples/BodyState.hpp>
+#include <string.h>
 
 
 

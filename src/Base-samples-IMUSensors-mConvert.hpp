@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/m_types/base_samples_IMUSensors.hpp>
 #include <base/m_types/base_samples_IMUSensors.hpp>
+#include <string.h>
 
 
 

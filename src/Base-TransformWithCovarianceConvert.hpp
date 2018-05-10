@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/TransformWithCovariance.hpp>
 #include <base/TransformWithCovariance.hpp>
+#include <string.h>
 
 
 

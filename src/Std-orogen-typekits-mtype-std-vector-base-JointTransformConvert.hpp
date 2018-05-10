@@ -12,6 +12,7 @@
 #define STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Base-JointTransform-mConvert.hpp"
 
@@ -38,7 +39,7 @@ void asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_toAsn1(T & 
     {
         result.arr[i] = baseObj[i];
     }
-    result.nCount = length_numStd_orogen_typekits_mtype_std_vector_base_JointTransform
+    result.nCount = length_numStd_orogen_typekits_mtype_std_vector_base_JointTransform;
 }
 
 

@@ -12,6 +12,7 @@
 #define WRAPPERS_VECTORXD_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 
 

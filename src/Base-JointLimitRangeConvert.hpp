@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/JointLimitRange.hpp>
 #include <base/JointLimits.hpp>
+#include <string.h>
 
 
 

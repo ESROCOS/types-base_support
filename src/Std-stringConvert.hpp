@@ -12,6 +12,7 @@
 #define T_STRING_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 
 

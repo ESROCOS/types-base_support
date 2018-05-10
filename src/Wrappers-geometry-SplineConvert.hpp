@@ -12,6 +12,7 @@
 #define WRAPPERS_GEOMETRY_SPLINE_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Wrappers-geometry-SplineTypeConvert.hpp"
 

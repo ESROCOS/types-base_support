@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/JointTransform.hpp>
 #include <base/JointTransform.hpp>
+#include <string.h>
 
 
 

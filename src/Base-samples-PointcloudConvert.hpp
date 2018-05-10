@@ -12,6 +12,7 @@
 #define BASE_SAMPLES_POINTCLOUD_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Base-TimeConvert.hpp"
 #include "Wrappers-Vector3dConvert.hpp"

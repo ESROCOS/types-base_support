@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/Pose.hpp>
 #include <base/Pose.hpp>
+#include <string.h>
 
 
 

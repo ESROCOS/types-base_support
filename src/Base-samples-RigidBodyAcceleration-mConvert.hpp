@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/m_types/base_samples_RigidBodyAcceleration.hpp>
 #include <base/m_types/base_samples_RigidBodyAcceleration.hpp>
+#include <string.h>
 
 
 

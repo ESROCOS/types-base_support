@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/samples/RigidBodyState.hpp>
 #include <base/samples/RigidBodyState.hpp>
+#include <string.h>
 
 
 

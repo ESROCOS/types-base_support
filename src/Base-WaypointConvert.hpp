@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/Waypoint.hpp>
 #include <base/Waypoint.hpp>
+#include <string.h>
 
 
 

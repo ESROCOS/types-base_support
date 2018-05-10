@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/samples/Pressure.hpp>
 #include <base/samples/Pressure.hpp>
+#include <string.h>
 
 
 

@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/samples/CommandSamples.hpp>
 #include <base/samples/CommandSamples.hpp>
+#include <string.h>
 
 
 

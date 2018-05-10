@@ -12,6 +12,7 @@
 #define BASE_SAMPLES_LASERSCAN_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Base-TimeConvert.hpp"
 

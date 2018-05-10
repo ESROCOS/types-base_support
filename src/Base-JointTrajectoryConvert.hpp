@@ -12,6 +12,7 @@
 #define BASE_JOINTTRAJECTORY_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Base-JointStateConvert.hpp"
 
@@ -38,7 +39,7 @@ void asn1SccBase_JointTrajectory_toAsn1(T & result, const std::vector<base::Join
     {
         result.arr[i] = baseObj[i];
     }
-    result.nCount = length_numBase_JointTrajectory
+    result.nCount = length_numBase_JointTrajectory;
 }
 
 

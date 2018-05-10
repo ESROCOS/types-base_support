@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/m_types/base_Pose2D.hpp>
 #include <base/m_types/base_Pose2D.hpp>
+#include <string.h>
 
 
 

@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/Trajectory.hpp>
 #include <base/Trajectory.hpp>
+#include <string.h>
 
 
 

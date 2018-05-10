@@ -12,6 +12,7 @@
 #define WRAPPERS_MATRIXXD_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 
 

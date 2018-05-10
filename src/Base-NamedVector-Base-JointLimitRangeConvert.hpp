@@ -12,6 +12,7 @@
 #define BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-JointLimitRangeConvert.hpp"

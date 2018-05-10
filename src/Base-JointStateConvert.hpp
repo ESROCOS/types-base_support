@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/JointState.hpp>
 #include <base/JointState.hpp>
+#include <string.h>
 
 
 

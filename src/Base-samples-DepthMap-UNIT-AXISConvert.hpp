@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/samples/DepthMap.hpp>
 #include <base/samples/DepthMap.hpp>
+#include <string.h>
 
 
 

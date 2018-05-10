@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/m_types/base_commands_LinearAngular6DCommand.hpp>
 #include <base/m_types/base_commands_LinearAngular6DCommand.hpp>
+#include <string.h>
 
 
 

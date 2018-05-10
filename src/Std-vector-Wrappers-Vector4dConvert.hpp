@@ -12,6 +12,7 @@
 #define STD_VECTOR_WRAPPERS_VECTOR4D_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Wrappers-Vector4dConvert.hpp"
 
@@ -38,7 +39,7 @@ void asn1SccStd_vector_Wrappers_Vector4d_toAsn1(T & result, const std::vector<wr
     {
         result.arr[i] = baseObj[i];
     }
-    result.nCount = length_numStd_vector_Wrappers_Vector4d
+    result.nCount = length_numStd_vector_Wrappers_Vector4d;
 }
 
 

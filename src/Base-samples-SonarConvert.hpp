@@ -12,6 +12,7 @@
 #define BASE_SAMPLES_SONAR_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "Base-TimeConvert.hpp"
 #include "Base-TimeConvert.hpp"

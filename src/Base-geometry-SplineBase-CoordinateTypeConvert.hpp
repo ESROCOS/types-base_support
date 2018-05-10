@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/geometry/Spline.hpp>
 #include <base/geometry/Spline.hpp>
+#include <string.h>
 
 
 

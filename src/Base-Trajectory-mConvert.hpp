@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/m_types/base_Trajectory.hpp>
 #include <base/m_types/base_Trajectory.hpp>
+#include <string.h>
 
 
 

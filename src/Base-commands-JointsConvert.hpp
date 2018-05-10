@@ -12,6 +12,7 @@
 #define BASE_COMMANDS_JOINTS_CONVERT
 
 #include "baseTypes.h"
+#include <string.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-JointTrajectoryConvert.hpp"

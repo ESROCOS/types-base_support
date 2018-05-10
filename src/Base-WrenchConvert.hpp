@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/Wrench.hpp>
 #include <base/Wrench.hpp>
+#include <string.h>
 
 
 

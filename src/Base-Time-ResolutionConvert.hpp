@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/Time.hpp>
 #include <base/Time.hpp>
+#include <string.h>
 
 
 

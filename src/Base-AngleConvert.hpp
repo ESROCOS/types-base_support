@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/Angle.hpp>
 #include <base/commands/Motion2D.hpp>
+#include <string.h>
 
 
 

@@ -14,6 +14,7 @@
 #include "baseTypes.h"
 #include <base/wrappers/Eigen.hpp>
 #include <base/wrappers/Eigen.hpp>
+#include <string.h>
 
 
 
