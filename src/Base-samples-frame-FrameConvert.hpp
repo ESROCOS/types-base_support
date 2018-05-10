@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "Base-TimeConvert.hpp"
 #include "Base-TimeConvert.hpp"
@@ -36,6 +37,7 @@ void asn1SccBase_samples_frame_Frame_fromAsn1(base::samples::frame::Frame& resul
     {
         result.image[i] = asnVal.image.arr[i];
     }
+
 
     for(int i = 0; i < numBase_samples_frame_Frame_attributes;i++)
     {

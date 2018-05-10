@@ -15,7 +15,12 @@
 #include <base/samples/IMUSensors.hpp>
 #include <base/samples/IMUSensors.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-TimeConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

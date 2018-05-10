@@ -15,6 +15,7 @@
 #include <base/Temperature.hpp>
 #include <base/Temperature.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

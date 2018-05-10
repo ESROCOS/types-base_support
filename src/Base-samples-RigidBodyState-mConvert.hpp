@@ -15,7 +15,19 @@
 #include <base/m_types/base_samples_RigidBodyState.hpp>
 #include <base/m_types/base_samples_RigidBodyState.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-TimeConvert.hpp"
+#include "T-StringConvert.hpp"
+#include "T-StringConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Matrix3dConvert.hpp"
+#include "Wrappers-QuaterniondConvert.hpp"
+#include "Wrappers-Matrix3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Matrix3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Matrix3dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

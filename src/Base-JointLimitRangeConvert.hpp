@@ -15,7 +15,10 @@
 #include <base/JointLimitRange.hpp>
 #include <base/JointLimits.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-JointStateConvert.hpp"
+#include "Base-JointStateConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

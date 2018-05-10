@@ -15,7 +15,9 @@
 #include <base/commands/Motion2D.hpp>
 #include <base/commands/Motion2D.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-AngleConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

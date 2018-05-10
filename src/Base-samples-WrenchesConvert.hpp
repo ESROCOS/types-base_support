@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-WrenchConvert.hpp"
@@ -25,10 +26,12 @@ template <typename T>
 void asn1SccBase_samples_Wrenches_fromAsn1(base::samples::Wrenches& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_samples_Wrenches_names=numBase_samples_Wrenches_names,     asn1SccT_UInt32 length_numBase_samples_Wrenches_elements=numBase_samples_Wrenches_elements)
 {
 
+
     for(int i = 0; i < numBase_samples_Wrenches_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
+
 
     for(int i = 0; i < numBase_samples_Wrenches_elements;i++)
     {

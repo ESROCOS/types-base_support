@@ -15,6 +15,7 @@
 #include <base/samples/LaserScan.hpp>
 #include <base/samples/LaserScan.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

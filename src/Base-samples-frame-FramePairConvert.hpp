@@ -15,7 +15,11 @@
 #include <base/samples/Frame.hpp>
 #include <base/samples/Frame.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-TimeConvert.hpp"
+#include "Base-samples-frame-FrameConvert.hpp"
+#include "Base-samples-frame-FrameConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

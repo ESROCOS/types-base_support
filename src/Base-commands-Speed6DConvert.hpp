@@ -15,6 +15,7 @@
 #include <base/commands/Speed6D.hpp>
 #include <base/commands/Speed6D.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

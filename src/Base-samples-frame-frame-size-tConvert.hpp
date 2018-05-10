@@ -15,6 +15,7 @@
 #include <base/samples/Frame.hpp>
 #include <base/samples/Frame.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

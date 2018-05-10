@@ -15,7 +15,10 @@
 #include <base/m_types/base_Pose.hpp>
 #include <base/m_types/base_Pose.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-QuaterniondConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

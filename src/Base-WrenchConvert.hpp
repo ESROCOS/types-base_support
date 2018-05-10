@@ -15,7 +15,10 @@
 #include <base/Wrench.hpp>
 #include <base/Wrench.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

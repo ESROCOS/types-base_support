@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-JointTrajectoryConvert.hpp"
@@ -24,6 +25,7 @@
 template <typename T>
 void asn1SccBase_commands_Joints_fromAsn1(base::samples::Joints& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_commands_Joints_names=numBase_commands_Joints_names)
 {
+
 
     for(int i = 0; i < numBase_commands_Joints_names;i++)
     {

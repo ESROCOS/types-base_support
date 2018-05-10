@@ -15,7 +15,9 @@
 #include <base/m_types/base_Waypoint.hpp>
 #include <base/m_types/base_Waypoint.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector3dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

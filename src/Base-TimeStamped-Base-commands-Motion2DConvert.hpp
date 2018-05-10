@@ -15,7 +15,10 @@
 #include <base/templates/TimeStamped.hpp>
 #include <base/samples/CommandSamples.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-AngleConvert.hpp"
+#include "Base-TimeConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

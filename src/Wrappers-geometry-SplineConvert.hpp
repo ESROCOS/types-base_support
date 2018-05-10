@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "Wrappers-geometry-SplineTypeConvert.hpp"
 

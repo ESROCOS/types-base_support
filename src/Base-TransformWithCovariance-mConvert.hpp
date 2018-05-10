@@ -15,7 +15,11 @@
 #include <base/m_types/base_TransformWithCovariance.hpp>
 #include <base/m_types/base_TransformWithCovariance.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-QuaterniondConvert.hpp"
+#include "Wrappers-Matrix6dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "Base-TimeConvert.hpp"
 #include "Base-TimeConvert.hpp"
@@ -27,6 +28,7 @@ void asn1SccBase_samples_DepthMap_fromAsn1(base::samples::DepthMap& result, cons
 {
 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
+
 
     for(int i = 0; i < numBase_samples_DepthMap_timestamps;i++)
     {

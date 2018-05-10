@@ -15,7 +15,9 @@
 #include <base/Trajectory.hpp>
 #include <base/Trajectory.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-geometry-SplineConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "Base-TimeConvert.hpp"
 #include "Base-TimeConvert.hpp"
@@ -34,6 +35,7 @@ void asn1SccBase_samples_SonarScan_fromAsn1(base::samples::SonarScan& result, co
     {
         result.data[i] = asnVal.data.arr[i];
     }
+
 
     for(int i = 0; i < numBase_samples_SonarScan_time_beams;i++)
     {

@@ -15,6 +15,7 @@
 #include <base/wrappers/geometry/Spline.hpp>
 #include <base/wrappers/geometry/Spline.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

@@ -15,7 +15,11 @@
 #include <base/m_types/base_samples_Wrench.hpp>
 #include <base/m_types/base_samples_Wrench.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Base-TimeConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

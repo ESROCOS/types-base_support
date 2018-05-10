@@ -15,6 +15,7 @@
 #include <base/Pose.hpp>
 #include <base/Pose.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

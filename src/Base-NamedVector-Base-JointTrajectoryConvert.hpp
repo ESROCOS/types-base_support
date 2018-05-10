@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-JointTrajectoryConvert.hpp"
@@ -24,10 +25,12 @@ template <typename T>
 void asn1SccBase_NamedVector_Base_JointTrajectory_fromAsn1(base::NamedVector<std::vector<base::JointState>>& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_NamedVector_Base_JointTrajectory_names=numBase_NamedVector_Base_JointTrajectory_names,     asn1SccT_UInt32 length_numBase_NamedVector_Base_JointTrajectory_elements=numBase_NamedVector_Base_JointTrajectory_elements)
 {
 
+
     for(int i = 0; i < numBase_NamedVector_Base_JointTrajectory_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
+
 
     for(int i = 0; i < numBase_NamedVector_Base_JointTrajectory_elements;i++)
     {

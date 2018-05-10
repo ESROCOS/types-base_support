@@ -15,7 +15,11 @@
 #include <base/m_types/base_samples_BodyState.hpp>
 #include <base/m_types/base_samples_BodyState.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-TimeConvert.hpp"
+#include "Base-TransformWithCovariance-mConvert.hpp"
+#include "Base-TwistWithCovariance-mConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

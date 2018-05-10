@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "Base-TimeConvert.hpp"
 #include "Wrappers-Vector3dConvert.hpp"
@@ -27,14 +28,20 @@ void asn1SccBase_samples_Pointcloud_fromAsn1(base::samples::Pointcloud& result, 
 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
+
     for(int i = 0; i < numBase_samples_Pointcloud_points;i++)
     {
-        asn1SccWrappers_Vector3d_fromAsn1(result.points[i], asnVal.points.arr[i]);
+		wrappers::Vector3d points_intermediate;
+		asn1SccWrappers_Vector3d_fromAsn1(points_intermediate, asnVal.points.arr[i]);
+		Base_Vector3d_fromIntermediate(result.points[i], points_intermediate);
     }
+
 
     for(int i = 0; i < numBase_samples_Pointcloud_colors;i++)
     {
-        asn1SccWrappers_Vector4d_fromAsn1(result.colors[i], asnVal.colors.arr[i]);
+		wrappers::Vector4d colors_intermediate;
+		asn1SccWrappers_Vector4d_fromAsn1(colors_intermediate, asnVal.colors.arr[i]);
+		Base_Vector4d_fromIntermediate(result.colors[i], colors_intermediate);
     }
 
 }

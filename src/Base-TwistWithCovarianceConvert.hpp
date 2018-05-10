@@ -15,7 +15,11 @@
 #include <base/TwistWithCovariance.hpp>
 #include <base/TwistWithCovariance.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Matrix6dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

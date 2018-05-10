@@ -15,7 +15,9 @@
 #include <base/m_types/base_Pose2D.hpp>
 #include <base/m_types/base_Pose2D.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Wrappers-Vector2dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

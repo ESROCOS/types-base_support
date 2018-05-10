@@ -15,6 +15,7 @@
 #include <base/JointState.hpp>
 #include <base/JointState.hpp>
 #include <string.h>
+#include <stdio.h>
 
 
 

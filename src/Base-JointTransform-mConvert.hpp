@@ -15,7 +15,11 @@
 #include <base/m_types/base_JointTransform.hpp>
 #include <base/m_types/base_JointTransform.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "T-StringConvert.hpp"
+#include "T-StringConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

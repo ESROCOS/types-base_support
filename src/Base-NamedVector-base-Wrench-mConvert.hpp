@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "T-StringConvert.hpp"
 #include "Std-orogen-typekits-mtype-std-vector-base-WrenchConvert.hpp"
@@ -23,6 +24,7 @@
 template <typename T>
 void asn1SccBase_NamedVector_base_Wrench_m_fromAsn1(base::NamedVector__base_Wrench__m& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_NamedVector_base_Wrench_m_names=numBase_NamedVector_base_Wrench_m_names)
 {
+
 
     for(int i = 0; i < numBase_NamedVector_base_Wrench_m_names;i++)
     {

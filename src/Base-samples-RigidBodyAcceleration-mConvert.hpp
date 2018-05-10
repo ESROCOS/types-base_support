@@ -15,7 +15,13 @@
 #include <base/m_types/base_samples_RigidBodyAcceleration.hpp>
 #include <base/m_types/base_samples_RigidBodyAcceleration.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-TimeConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Matrix3dConvert.hpp"
+#include "Wrappers-Vector3dConvert.hpp"
+#include "Wrappers-Matrix3dConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

@@ -15,7 +15,9 @@
 #include <base/samples/Pressure.hpp>
 #include <base/samples/Pressure.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "Base-TimeConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

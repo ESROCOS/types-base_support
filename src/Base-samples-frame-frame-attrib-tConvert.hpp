@@ -15,7 +15,10 @@
 #include <base/samples/Frame.hpp>
 #include <base/samples/Frame.hpp>
 #include <string.h>
+#include <stdio.h>
 
+#include "T-StringConvert.hpp"
+#include "T-StringConvert.hpp"
 
 
 //Conversion functions from asn1 to c++ type

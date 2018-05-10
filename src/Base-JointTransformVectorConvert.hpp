@@ -13,6 +13,7 @@
 
 #include "baseTypes.h"
 #include <string.h>
+#include <stdio.h>
 
 #include "T-StringConvert.hpp"
 #include "Base-JointTransformConvert.hpp"
@@ -24,10 +25,12 @@ template <typename T>
 void asn1SccBase_JointTransformVector_fromAsn1(base::JointTransformVector& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_JointTransformVector_names=numBase_JointTransformVector_names,     asn1SccT_UInt32 length_numBase_JointTransformVector_elements=numBase_JointTransformVector_elements)
 {
 
+
     for(int i = 0; i < numBase_JointTransformVector_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
+
 
     for(int i = 0; i < numBase_JointTransformVector_elements;i++)
     {
