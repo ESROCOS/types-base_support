@@ -12,6 +12,8 @@
 #define BASE_COMMANDS_JOINTS_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/Joints.hpp>
+#include <base/samples/Joints.hpp>
 #include <string.h>
 #include <stdio.h>
 

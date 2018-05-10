@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_POINTCLOUD_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/Pointcloud.hpp>
+#include <base/samples/Pointcloud.hpp>
 #include <string.h>
 #include <stdio.h>
 

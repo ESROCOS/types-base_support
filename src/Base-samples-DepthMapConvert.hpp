@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_DEPTHMAP_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/DepthMap.hpp>
+#include <base/samples/DepthMap.hpp>
 #include <string.h>
 #include <stdio.h>
 

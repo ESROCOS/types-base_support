@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_SONAR_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/Sonar.hpp>
+#include <base/samples/Sonar.hpp>
 #include <string.h>
 #include <stdio.h>
 

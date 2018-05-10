@@ -12,6 +12,8 @@
 #define BASE_NAMEDVECTOR_BASE_WRENCH_M_CONVERT
 
 #include "baseTypes.h"
+#include <base/m_types/base_NamedVector__base_Wrench_.hpp>
+#include <base/m_types/base_NamedVector__base_Wrench_.hpp>
 #include <string.h>
 #include <stdio.h>
 

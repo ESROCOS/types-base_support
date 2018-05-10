@@ -12,6 +12,8 @@
 #define BASE_JOINTLIMITS_CONVERT
 
 #include "baseTypes.h"
+#include <base/JointLimits.hpp>
+#include <base/JointLimits.hpp>
 #include <string.h>
 #include <stdio.h>
 

@@ -12,6 +12,8 @@
 #define BASE_JOINTTRANSFORMVECTOR_M_CONVERT
 
 #include "baseTypes.h"
+#include <base/m_types/base_JointTransformVector.hpp>
+#include <base/m_types/base_JointTransformVector.hpp>
 #include <string.h>
 #include <stdio.h>
 

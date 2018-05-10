@@ -12,6 +12,9 @@
 #define STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_CONVERT
 
 #include "baseTypes.h"
+#include <c++/6/bits/stl_vector.h>
+#include <vector>
+#include <base/m_types/base_Trajectory.hpp>
 #include <string.h>
 #include <stdio.h>
 

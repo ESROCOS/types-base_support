@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_WRENCHES_M_CONVERT
 
 #include "baseTypes.h"
+#include <base/m_types/base_samples_Wrenches.hpp>
+#include <base/m_types/base_samples_Wrenches.hpp>
 #include <string.h>
 #include <stdio.h>
 

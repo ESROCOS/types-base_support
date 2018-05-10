@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_LASERSCAN_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/LaserScan.hpp>
+#include <base/samples/LaserScan.hpp>
 #include <string.h>
 #include <stdio.h>
 

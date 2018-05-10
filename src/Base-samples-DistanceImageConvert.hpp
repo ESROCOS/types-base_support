@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_DISTANCEIMAGE_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/DistanceImage.hpp>
+#include <base/samples/DistanceImage.hpp>
 #include <string.h>
 #include <stdio.h>
 

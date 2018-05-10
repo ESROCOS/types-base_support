@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_SONARBEAM_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/SonarBeam.hpp>
+#include <base/samples/SonarBeam.hpp>
 #include <string.h>
 #include <stdio.h>
 

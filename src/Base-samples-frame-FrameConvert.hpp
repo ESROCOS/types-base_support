@@ -12,6 +12,8 @@
 #define BASE_SAMPLES_FRAME_FRAME_CONVERT
 
 #include "baseTypes.h"
+#include <base/samples/Frame.hpp>
+#include <base/samples/Frame.hpp>
 #include <string.h>
 #include <stdio.h>
 

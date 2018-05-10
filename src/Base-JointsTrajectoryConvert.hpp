@@ -12,6 +12,8 @@
 #define BASE_JOINTSTRAJECTORY_CONVERT
 
 #include "baseTypes.h"
+#include <base/JointsTrajectory.hpp>
+#include <base/JointsTrajectory.hpp>
 #include <string.h>
 #include <stdio.h>
 

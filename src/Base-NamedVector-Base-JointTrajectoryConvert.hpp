@@ -12,6 +12,8 @@
 #define BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_CONVERT
 
 #include "baseTypes.h"
+#include <base/NamedVector.hpp>
+#include <base/samples/Joints.hpp>
 #include <string.h>
 #include <stdio.h>
 
