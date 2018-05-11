@@ -34,11 +34,13 @@ void asn1SccWrappers_geometry_Spline_fromAsn1(wrappers::geometry::Spline& result
 
     asn1SccWrappers_geometry_SplineType_fromAsn1(result.kind, asnVal.kind);
 
+    result.knots.resize(asnVal.knots.nCount);
     for(int i = 0; i < numWrappers_geometry_Spline_knots;i++)
     {
         result.knots[i] = asnVal.knots.arr[i];
     }
 
+    result.vertices.resize(asnVal.vertices.nCount);
     for(int i = 0; i < numWrappers_geometry_Spline_vertices;i++)
     {
         result.vertices[i] = asnVal.vertices.arr[i];

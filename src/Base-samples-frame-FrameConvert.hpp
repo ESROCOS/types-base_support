@@ -35,12 +35,13 @@ void asn1SccBase_samples_frame_Frame_fromAsn1(base::samples::frame::Frame& resul
 
     asn1SccBase_Time_fromAsn1(result.received_time, asnVal.received_time);
 
+    result.image.resize(asnVal.image.nCount);
     for(int i = 0; i < numBase_samples_frame_Frame_image;i++)
     {
         result.image[i] = asnVal.image.arr[i];
     }
 
-
+    result.attributes.resize(asnVal.attributes.nCount);
     for(int i = 0; i < numBase_samples_frame_Frame_attributes;i++)
     {
         asn1SccBase_samples_frame_frame_attrib_t_fromAsn1(result.attributes[i], asnVal.attributes.arr[i]);

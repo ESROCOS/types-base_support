@@ -27,6 +27,7 @@ template <typename T>
 void asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_fromAsn1(std::vector<base::Waypoint_m>& result, const T & asnVal,    asn1SccT_UInt32 length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint=numStd_orogen_typekits_mtype_std_vector_base_Waypoint)
 {
 
+    result.resize(asnVal.nCount);
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint; i++)
     {
 		asn1SccBase_Waypoint_m_fromAsn1(result[i], asnVal.arr[i]);

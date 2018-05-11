@@ -27,6 +27,7 @@ template <typename T>
 void asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_fromAsn1(std::vector<base::Wrench_m>& result, const T & asnVal,    asn1SccT_UInt32 length_numStd_orogen_typekits_mtype_std_vector_base_Wrench=numStd_orogen_typekits_mtype_std_vector_base_Wrench)
 {
 
+    result.resize(asnVal.nCount);
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Wrench; i++)
     {
 		asn1SccBase_Wrench_m_fromAsn1(result[i], asnVal.arr[i]);

@@ -27,13 +27,13 @@ template <typename T>
 void asn1SccBase_NamedVector_Base_JointLimitRange_fromAsn1(base::NamedVector<base::JointLimitRange>& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_NamedVector_Base_JointLimitRange_names=numBase_NamedVector_Base_JointLimitRange_names,     asn1SccT_UInt32 length_numBase_NamedVector_Base_JointLimitRange_elements=numBase_NamedVector_Base_JointLimitRange_elements)
 {
 
-
+    result.names.resize(asnVal.names.nCount);
     for(int i = 0; i < numBase_NamedVector_Base_JointLimitRange_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
 
-
+    result.elements.resize(asnVal.elements.nCount);
     for(int i = 0; i < numBase_NamedVector_Base_JointLimitRange_elements;i++)
     {
         asn1SccBase_JointLimitRange_fromAsn1(result.elements[i], asnVal.elements.arr[i]);

@@ -28,7 +28,7 @@ template <typename T>
 void asn1SccBase_samples_Wrenches_m_fromAsn1(base::samples::Wrenches_m& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_samples_Wrenches_m_names=numBase_samples_Wrenches_m_names)
 {
 
-
+    result.names.resize(asnVal.names.nCount);
     for(int i = 0; i < numBase_samples_Wrenches_m_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);

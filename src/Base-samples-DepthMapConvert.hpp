@@ -31,7 +31,7 @@ void asn1SccBase_samples_DepthMap_fromAsn1(base::samples::DepthMap& result, cons
 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
-
+    result.timestamps.resize(asnVal.timestamps.nCount);
     for(int i = 0; i < numBase_samples_DepthMap_timestamps;i++)
     {
         asn1SccBase_Time_fromAsn1(result.timestamps[i], asnVal.timestamps.arr[i]);
@@ -41,11 +41,13 @@ void asn1SccBase_samples_DepthMap_fromAsn1(base::samples::DepthMap& result, cons
 
     asn1SccBase_samples_DepthMap_PROJECTION_TYPE_fromAsn1(result.horizontal_projection, asnVal.horizontal_projection);
 
+    result.vertical_interval.resize(asnVal.vertical_interval.nCount);
     for(int i = 0; i < numBase_samples_DepthMap_vertical_interval;i++)
     {
         result.vertical_interval[i] = asnVal.vertical_interval.arr[i];
     }
 
+    result.horizontal_interval.resize(asnVal.horizontal_interval.nCount);
     for(int i = 0; i < numBase_samples_DepthMap_horizontal_interval;i++)
     {
         result.horizontal_interval[i] = asnVal.horizontal_interval.arr[i];
@@ -55,11 +57,13 @@ void asn1SccBase_samples_DepthMap_fromAsn1(base::samples::DepthMap& result, cons
 
     result.horizontal_size = asnVal.horizontal_size;
 
+    result.distances.resize(asnVal.distances.nCount);
     for(int i = 0; i < numBase_samples_DepthMap_distances;i++)
     {
         result.distances[i] = asnVal.distances.arr[i];
     }
 
+    result.remissions.resize(asnVal.remissions.nCount);
     for(int i = 0; i < numBase_samples_DepthMap_remissions;i++)
     {
         result.remissions[i] = asnVal.remissions.arr[i];

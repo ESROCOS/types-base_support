@@ -33,7 +33,7 @@ void asn1SccBase_samples_Sonar_fromAsn1(base::samples::Sonar& result, const T & 
 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
-
+    result.timestamps.resize(asnVal.timestamps.nCount);
     for(int i = 0; i < numBase_samples_Sonar_timestamps;i++)
     {
         asn1SccBase_Time_fromAsn1(result.timestamps[i], asnVal.timestamps.arr[i]);
@@ -45,7 +45,7 @@ void asn1SccBase_samples_Sonar_fromAsn1(base::samples::Sonar& result, const T & 
 
     asn1SccBase_Angle_fromAsn1(result.beam_height, asnVal.beam_height);
 
-
+    result.bearings.resize(asnVal.bearings.nCount);
     for(int i = 0; i < numBase_samples_Sonar_bearings;i++)
     {
         asn1SccBase_Angle_fromAsn1(result.bearings[i], asnVal.bearings.arr[i]);
@@ -57,6 +57,7 @@ void asn1SccBase_samples_Sonar_fromAsn1(base::samples::Sonar& result, const T & 
 
     result.beam_count = asnVal.beam_count;
 
+    result.bins.resize(asnVal.bins.nCount);
     for(int i = 0; i < numBase_samples_Sonar_bins;i++)
     {
         result.bins[i] = asnVal.bins.arr[i];

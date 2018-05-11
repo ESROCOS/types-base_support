@@ -40,6 +40,7 @@ void asn1SccBase_samples_DistanceImage_fromAsn1(base::samples::DistanceImage& re
 
     result.center_y = asnVal.center_y;
 
+    result.data.resize(asnVal.data.nCount);
     for(int i = 0; i < numBase_samples_DistanceImage_data;i++)
     {
         result.data[i] = asnVal.data.arr[i];

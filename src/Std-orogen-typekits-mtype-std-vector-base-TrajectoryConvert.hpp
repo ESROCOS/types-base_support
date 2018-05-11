@@ -27,6 +27,7 @@ template <typename T>
 void asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_fromAsn1(std::vector<base::Trajectory_m>& result, const T & asnVal,    asn1SccT_UInt32 length_numStd_orogen_typekits_mtype_std_vector_base_Trajectory=numStd_orogen_typekits_mtype_std_vector_base_Trajectory)
 {
 
+    result.resize(asnVal.nCount);
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Trajectory; i++)
     {
 		asn1SccBase_Trajectory_m_fromAsn1(result[i], asnVal.arr[i]);

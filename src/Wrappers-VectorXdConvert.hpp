@@ -25,6 +25,7 @@ template <typename T>
 void asn1SccWrappers_VectorXd_fromAsn1(wrappers::VectorX<double>& result, const T & asnVal,    asn1SccT_UInt32 length_numWrappers_VectorXd_data=numWrappers_VectorXd_data)
 {
 
+    result.data.resize(asnVal.data.nCount);
     for(int i = 0; i < numWrappers_VectorXd_data;i++)
     {
         result.data[i] = asnVal.data.arr[i];

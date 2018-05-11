@@ -27,7 +27,7 @@ template <typename T>
 void asn1SccBase_JointTransformVector_m_fromAsn1(base::JointTransformVector_m& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_JointTransformVector_m_names=numBase_JointTransformVector_m_names)
 {
 
-
+    result.names.resize(asnVal.names.nCount);
     for(int i = 0; i < numBase_JointTransformVector_m_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);

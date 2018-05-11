@@ -27,6 +27,7 @@ template <typename T>
 void asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_fromAsn1(std::vector<base::JointTransform_m>& result, const T & asnVal,    asn1SccT_UInt32 length_numStd_orogen_typekits_mtype_std_vector_base_JointTransform=numStd_orogen_typekits_mtype_std_vector_base_JointTransform)
 {
 
+    result.resize(asnVal.nCount);
     for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_JointTransform; i++)
     {
 		asn1SccBase_JointTransform_m_fromAsn1(result[i], asnVal.arr[i]);

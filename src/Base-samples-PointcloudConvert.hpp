@@ -30,7 +30,7 @@ void asn1SccBase_samples_Pointcloud_fromAsn1(base::samples::Pointcloud& result, 
 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
-
+    result.points.resize(asnVal.points.nCount);
     for(int i = 0; i < numBase_samples_Pointcloud_points;i++)
     {
 		wrappers::Vector3d points_intermediate;
@@ -38,7 +38,7 @@ void asn1SccBase_samples_Pointcloud_fromAsn1(base::samples::Pointcloud& result, 
 		Base_Vector3d_fromIntermediate(result.points[i], points_intermediate);
     }
 
-
+    result.colors.resize(asnVal.colors.nCount);
     for(int i = 0; i < numBase_samples_Pointcloud_colors;i++)
     {
 		wrappers::Vector4d colors_intermediate;

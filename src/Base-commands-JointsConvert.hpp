@@ -28,7 +28,7 @@ template <typename T>
 void asn1SccBase_commands_Joints_fromAsn1(base::samples::Joints& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_commands_Joints_names=numBase_commands_Joints_names)
 {
 
-
+    result.names.resize(asnVal.names.nCount);
     for(int i = 0; i < numBase_commands_Joints_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);

@@ -29,6 +29,7 @@ void asn1SccWrappers_MatrixXd_fromAsn1(wrappers::MatrixX<double>& result, const 
 
     result.cols = asnVal.cols;
 
+    result.data.resize(asnVal.data.nCount);
     for(int i = 0; i < numWrappers_MatrixXd_data;i++)
     {
         result.data[i] = asnVal.data.arr[i];

@@ -33,12 +33,13 @@ void asn1SccBase_samples_SonarScan_fromAsn1(base::samples::SonarScan& result, co
 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
+    result.data.resize(asnVal.data.nCount);
     for(int i = 0; i < numBase_samples_SonarScan_data;i++)
     {
         result.data[i] = asnVal.data.arr[i];
     }
 
-
+    result.time_beams.resize(asnVal.time_beams.nCount);
     for(int i = 0; i < numBase_samples_SonarScan_time_beams;i++)
     {
         asn1SccBase_Time_fromAsn1(result.time_beams[i], asnVal.time_beams.arr[i]);

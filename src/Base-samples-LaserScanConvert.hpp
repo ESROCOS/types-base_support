@@ -34,6 +34,7 @@ void asn1SccBase_samples_LaserScan_fromAsn1(base::samples::LaserScan& result, co
 
     result.speed = asnVal.speed;
 
+    result.ranges.resize(asnVal.ranges.nCount);
     for(int i = 0; i < numBase_samples_LaserScan_ranges;i++)
     {
         result.ranges[i] = asnVal.ranges.arr[i];
@@ -43,6 +44,7 @@ void asn1SccBase_samples_LaserScan_fromAsn1(base::samples::LaserScan& result, co
 
     result.maxRange = asnVal.maxrange;
 
+    result.remission.resize(asnVal.remission.nCount);
     for(int i = 0; i < numBase_samples_LaserScan_remission;i++)
     {
         result.remission[i] = asnVal.remission.arr[i];

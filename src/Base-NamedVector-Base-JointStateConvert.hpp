@@ -27,7 +27,7 @@ template <typename T>
 void asn1SccBase_NamedVector_Base_JointState_fromAsn1(base::NamedVector<base::JointState>& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_NamedVector_Base_JointState_names=numBase_NamedVector_Base_JointState_names)
 {
 
-
+    result.names.resize(asnVal.names.nCount);
     for(int i = 0; i < numBase_NamedVector_Base_JointState_names;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);

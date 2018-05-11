@@ -39,6 +39,7 @@ void asn1SccBase_samples_SonarBeam_fromAsn1(base::samples::SonarBeam& result, co
 
     result.beamwidth_vertical = asnVal.beamwidth_vertical;
 
+    result.beam.resize(asnVal.beam.nCount);
     for(int i = 0; i < numBase_samples_SonarBeam_beam;i++)
     {
         result.beam[i] = asnVal.beam.arr[i];
