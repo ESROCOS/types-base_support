@@ -35,13 +35,13 @@ void asn1SccWrappers_geometry_Spline_fromAsn1(wrappers::geometry::Spline& result
     asn1SccWrappers_geometry_SplineType_fromAsn1(result.kind, asnVal.kind);
 
     result.knots.resize(asnVal.knots.nCount);
-    for(int i = 0; i < numWrappers_geometry_Spline_knots;i++)
+    for(int i = 0; i < asnVal.knots.nCount;i++)
     {
         result.knots[i] = asnVal.knots.arr[i];
     }
 
     result.vertices.resize(asnVal.vertices.nCount);
-    for(int i = 0; i < numWrappers_geometry_Spline_vertices;i++)
+    for(int i = 0; i < asnVal.vertices.nCount;i++)
     {
         result.vertices[i] = asnVal.vertices.arr[i];
     }
@@ -54,20 +54,44 @@ template <typename T>
 void asn1SccWrappers_geometry_Spline_toAsn1(T & result, const wrappers::geometry::Spline& baseObj,    asn1SccT_UInt32 length_numWrappers_geometry_Spline_knots=numWrappers_geometry_Spline_knots,     asn1SccT_UInt32 length_numWrappers_geometry_Spline_vertices=numWrappers_geometry_Spline_vertices)
 {
 
+
     result.geometric_resolution = baseObj.geometric_resolution;
+
 
     result.dimension = baseObj.dimension;
 
+
     result.curve_order = baseObj.curve_order;
+
 
     asn1SccWrappers_geometry_SplineType_toAsn1(result.kind, baseObj.kind);
 
-    for(int i = 0; i < numWrappers_geometry_Spline_knots;i++)
+    if( baseObj.knots.size() > numWrappers_geometry_Spline_knots)
+    {
+        fprintf(stderr, "WARNING:  truncated knots of asn1SccWrappers_geometry_Spline to %lld elements.\n",numWrappers_geometry_Spline_knots);
+        result.knots.nCount = numWrappers_geometry_Spline_knots;
+    }
+    else
+    {
+        result.knots.nCount = baseObj.knots.size();
+    }
+
+    for(int i = 0; i < result.knots.nCount ;i++)
     {
         result.knots.arr[i]= baseObj.knots[i];
     }
 
-    for(int i = 0; i < numWrappers_geometry_Spline_vertices;i++)
+    if( baseObj.vertices.size() > numWrappers_geometry_Spline_vertices)
+    {
+        fprintf(stderr, "WARNING:  truncated vertices of asn1SccWrappers_geometry_Spline to %lld elements.\n",numWrappers_geometry_Spline_vertices);
+        result.vertices.nCount = numWrappers_geometry_Spline_vertices;
+    }
+    else
+    {
+        result.vertices.nCount = baseObj.vertices.size();
+    }
+
+    for(int i = 0; i < result.vertices.nCount ;i++)
     {
         result.vertices.arr[i]= baseObj.vertices[i];
     }

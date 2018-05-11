@@ -28,7 +28,7 @@ void asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_fromAsn1(std::vec
 {
 
     result.resize(asnVal.nCount);
-    for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint; i++)
+    for (int i = 0; i < asnVal.nCount; i++)
     {
 		asn1SccBase_Waypoint_m_fromAsn1(result[i], asnVal.arr[i]);
     }
@@ -40,11 +40,17 @@ template <typename T>
 void asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_toAsn1(T & result, const std::vector<base::Waypoint_m>& baseObj,    asn1SccT_UInt32 length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint=numStd_orogen_typekits_mtype_std_vector_base_Waypoint)
 {
 
-    for (int i = 0; i < length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint; i++)
+    if( baseObj.size() > length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint)
     {
-        result.arr[i] = baseObj[i];
+        fprintf(stderr, "WARNING:  truncated asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint to %lld elements.\n",length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint);
+        result.nCount = length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint;
     }
-    result.nCount = length_numStd_orogen_typekits_mtype_std_vector_base_Waypoint;
+    else
+        result.nCount = baseObj.size();
+    for (int i = 0; i < result.nCount; i++)
+    {
+		asn1SccBase_Waypoint_m_toAsn1(result.arr[i], baseObj[i]);
+    }
 }
 
 

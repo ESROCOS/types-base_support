@@ -29,7 +29,7 @@ void asn1SccBase_commands_Joints_fromAsn1(base::samples::Joints& result, const T
 {
 
     result.names.resize(asnVal.names.nCount);
-    for(int i = 0; i < numBase_commands_Joints_names;i++)
+    for(int i = 0; i < asnVal.names.nCount;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
@@ -46,12 +46,24 @@ template <typename T>
 void asn1SccBase_commands_Joints_toAsn1(T & result, const base::samples::Joints& baseObj,    asn1SccT_UInt32 length_numBase_commands_Joints_names=numBase_commands_Joints_names)
 {
 
-    for(int i = 0; i < numBase_commands_Joints_names;i++)
+    if( baseObj.names.size() > numBase_commands_Joints_names)
+    {
+        fprintf(stderr, "WARNING:  truncated names of asn1SccBase_commands_Joints to %lld elements.\n",numBase_commands_Joints_names);
+        result.names.nCount = numBase_commands_Joints_names;
+    }
+    else
+    {
+        result.names.nCount = baseObj.names.size();
+    }
+
+    for(int i = 0; i < result.names.nCount;i++)
     {
         asn1SccT_String_toAsn1(result.names.arr[i], baseObj.names[i]);
     }
 
+
     asn1SccBase_JointTrajectory_toAsn1(result.elements, baseObj.elements);
+
 
     asn1SccBase_Time_toAsn1(result.time, baseObj.time);
 

@@ -28,7 +28,7 @@ void asn1SccBase_JointTransformVector_m_fromAsn1(base::JointTransformVector_m& r
 {
 
     result.names.resize(asnVal.names.nCount);
-    for(int i = 0; i < numBase_JointTransformVector_m_names;i++)
+    for(int i = 0; i < asnVal.names.nCount;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
@@ -43,10 +43,21 @@ template <typename T>
 void asn1SccBase_JointTransformVector_m_toAsn1(T & result, const base::JointTransformVector_m& baseObj,    asn1SccT_UInt32 length_numBase_JointTransformVector_m_names=numBase_JointTransformVector_m_names)
 {
 
-    for(int i = 0; i < numBase_JointTransformVector_m_names;i++)
+    if( baseObj.names.size() > numBase_JointTransformVector_m_names)
+    {
+        fprintf(stderr, "WARNING:  truncated names of asn1SccBase_JointTransformVector_m to %lld elements.\n",numBase_JointTransformVector_m_names);
+        result.names.nCount = numBase_JointTransformVector_m_names;
+    }
+    else
+    {
+        result.names.nCount = baseObj.names.size();
+    }
+
+    for(int i = 0; i < result.names.nCount;i++)
     {
         asn1SccT_String_toAsn1(result.names.arr[i], baseObj.names[i]);
     }
+
 
     asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_toAsn1(result.elements, baseObj.elements);
 

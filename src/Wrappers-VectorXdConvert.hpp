@@ -26,7 +26,7 @@ void asn1SccWrappers_VectorXd_fromAsn1(wrappers::VectorX<double>& result, const 
 {
 
     result.data.resize(asnVal.data.nCount);
-    for(int i = 0; i < numWrappers_VectorXd_data;i++)
+    for(int i = 0; i < asnVal.data.nCount;i++)
     {
         result.data[i] = asnVal.data.arr[i];
     }
@@ -39,7 +39,17 @@ template <typename T>
 void asn1SccWrappers_VectorXd_toAsn1(T & result, const wrappers::VectorX<double>& baseObj,    asn1SccT_UInt32 length_numWrappers_VectorXd_data=numWrappers_VectorXd_data)
 {
 
-    for(int i = 0; i < numWrappers_VectorXd_data;i++)
+    if( baseObj.data.size() > numWrappers_VectorXd_data)
+    {
+        fprintf(stderr, "WARNING:  truncated data of asn1SccWrappers_VectorXd to %lld elements.\n",numWrappers_VectorXd_data);
+        result.data.nCount = numWrappers_VectorXd_data;
+    }
+    else
+    {
+        result.data.nCount = baseObj.data.size();
+    }
+
+    for(int i = 0; i < result.data.nCount ;i++)
     {
         result.data.arr[i]= baseObj.data[i];
     }

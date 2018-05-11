@@ -31,7 +31,7 @@ void asn1SccBase_samples_Pointcloud_fromAsn1(base::samples::Pointcloud& result, 
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
     result.points.resize(asnVal.points.nCount);
-    for(int i = 0; i < numBase_samples_Pointcloud_points;i++)
+    for(int i = 0; i < asnVal.points.nCount;i++)
     {
 		wrappers::Vector3d points_intermediate;
 		asn1SccWrappers_Vector3d_fromAsn1(points_intermediate, asnVal.points.arr[i]);
@@ -39,7 +39,7 @@ void asn1SccBase_samples_Pointcloud_fromAsn1(base::samples::Pointcloud& result, 
     }
 
     result.colors.resize(asnVal.colors.nCount);
-    for(int i = 0; i < numBase_samples_Pointcloud_colors;i++)
+    for(int i = 0; i < asnVal.colors.nCount;i++)
     {
 		wrappers::Vector4d colors_intermediate;
 		asn1SccWrappers_Vector4d_fromAsn1(colors_intermediate, asnVal.colors.arr[i]);
@@ -54,16 +54,41 @@ template <typename T>
 void asn1SccBase_samples_Pointcloud_toAsn1(T & result, const base::samples::Pointcloud& baseObj,    asn1SccT_UInt32 length_numBase_samples_Pointcloud_points=numBase_samples_Pointcloud_points,     asn1SccT_UInt32 length_numBase_samples_Pointcloud_colors=numBase_samples_Pointcloud_colors)
 {
 
+
     asn1SccBase_Time_toAsn1(result.time, baseObj.time);
 
-    for(int i = 0; i < numBase_samples_Pointcloud_points;i++)
+    if( baseObj.points.size() > numBase_samples_Pointcloud_points)
     {
-        asn1SccWrappers_Vector3d_toAsn1(result.points.arr[i], baseObj.points[i]);
+        fprintf(stderr, "WARNING:  truncated points of asn1SccBase_samples_Pointcloud to %lld elements.\n",numBase_samples_Pointcloud_points);
+        result.points.nCount = numBase_samples_Pointcloud_points;
+    }
+    else
+    {
+        result.points.nCount = baseObj.points.size();
     }
 
-    for(int i = 0; i < numBase_samples_Pointcloud_colors;i++)
+    for(int i = 0; i < result.points.nCount;i++)
     {
-        asn1SccWrappers_Vector4d_toAsn1(result.colors.arr[i], baseObj.colors[i]);
+		wrappers::Vector3d points_intermediate;
+		Base_Vector3d_fromIntermediate(points_intermediate, baseObj.points[i]);
+		asn1SccWrappers_Vector3d_toAsn1(result.points.arr[i], points_intermediate);
+    }
+
+    if( baseObj.colors.size() > numBase_samples_Pointcloud_colors)
+    {
+        fprintf(stderr, "WARNING:  truncated colors of asn1SccBase_samples_Pointcloud to %lld elements.\n",numBase_samples_Pointcloud_colors);
+        result.colors.nCount = numBase_samples_Pointcloud_colors;
+    }
+    else
+    {
+        result.colors.nCount = baseObj.colors.size();
+    }
+
+    for(int i = 0; i < result.colors.nCount;i++)
+    {
+		wrappers::Vector4d colors_intermediate;
+		Base_Vector4d_fromIntermediate(colors_intermediate, baseObj.colors[i]);
+		asn1SccWrappers_Vector4d_toAsn1(result.colors.arr[i], colors_intermediate);
     }
 
 }

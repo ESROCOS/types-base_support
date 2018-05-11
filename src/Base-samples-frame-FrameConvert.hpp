@@ -36,13 +36,13 @@ void asn1SccBase_samples_frame_Frame_fromAsn1(base::samples::frame::Frame& resul
     asn1SccBase_Time_fromAsn1(result.received_time, asnVal.received_time);
 
     result.image.resize(asnVal.image.nCount);
-    for(int i = 0; i < numBase_samples_frame_Frame_image;i++)
+    for(int i = 0; i < asnVal.image.nCount;i++)
     {
         result.image[i] = asnVal.image.arr[i];
     }
 
     result.attributes.resize(asnVal.attributes.nCount);
-    for(int i = 0; i < numBase_samples_frame_Frame_attributes;i++)
+    for(int i = 0; i < asnVal.attributes.nCount;i++)
     {
         asn1SccBase_samples_frame_frame_attrib_t_fromAsn1(result.attributes[i], asnVal.attributes.arr[i]);
     }
@@ -67,29 +67,57 @@ template <typename T>
 void asn1SccBase_samples_frame_Frame_toAsn1(T & result, const base::samples::frame::Frame& baseObj,    asn1SccT_UInt32 length_numBase_samples_frame_Frame_image=numBase_samples_frame_Frame_image,     asn1SccT_UInt32 length_numBase_samples_frame_Frame_attributes=numBase_samples_frame_Frame_attributes)
 {
 
+
     asn1SccBase_Time_toAsn1(result.time, baseObj.time);
+
 
     asn1SccBase_Time_toAsn1(result.received_time, baseObj.received_time);
 
-    for(int i = 0; i < numBase_samples_frame_Frame_image;i++)
+    if( baseObj.image.size() > numBase_samples_frame_Frame_image)
+    {
+        fprintf(stderr, "WARNING:  truncated image of asn1SccBase_samples_frame_Frame to %lld elements.\n",numBase_samples_frame_Frame_image);
+        result.image.nCount = numBase_samples_frame_Frame_image;
+    }
+    else
+    {
+        result.image.nCount = baseObj.image.size();
+    }
+
+    for(int i = 0; i < result.image.nCount ;i++)
     {
         result.image.arr[i]= baseObj.image[i];
     }
 
-    for(int i = 0; i < numBase_samples_frame_Frame_attributes;i++)
+    if( baseObj.attributes.size() > numBase_samples_frame_Frame_attributes)
+    {
+        fprintf(stderr, "WARNING:  truncated attributes of asn1SccBase_samples_frame_Frame to %lld elements.\n",numBase_samples_frame_Frame_attributes);
+        result.attributes.nCount = numBase_samples_frame_Frame_attributes;
+    }
+    else
+    {
+        result.attributes.nCount = baseObj.attributes.size();
+    }
+
+    for(int i = 0; i < result.attributes.nCount;i++)
     {
         asn1SccBase_samples_frame_frame_attrib_t_toAsn1(result.attributes.arr[i], baseObj.attributes[i]);
     }
 
+
     asn1SccBase_samples_frame_frame_size_t_toAsn1(result.size, baseObj.size);
+
 
     result.data_depth = baseObj.data_depth;
 
+
     result.pixel_size = baseObj.pixel_size;
+
 
     result.row_size = baseObj.row_size;
 
+
     asn1SccBase_samples_frame_frame_mode_t_toAsn1(result.frame_mode, baseObj.frame_mode);
+
 
     asn1SccBase_samples_frame_frame_status_t_toAsn1(result.frame_status, baseObj.frame_status);
 

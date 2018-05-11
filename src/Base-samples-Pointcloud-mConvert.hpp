@@ -31,13 +31,13 @@ void asn1SccBase_samples_Pointcloud_m_fromAsn1(base::samples::Pointcloud_m& resu
     asn1SccBase_Time_fromAsn1(result.time, asnVal.time);
 
     result.points.resize(asnVal.points.nCount);
-    for(int i = 0; i < numBase_samples_Pointcloud_m_points;i++)
+    for(int i = 0; i < asnVal.points.nCount;i++)
     {
         asn1SccWrappers_Vector3d_fromAsn1(result.points[i], asnVal.points.arr[i]);
     }
 
     result.colors.resize(asnVal.colors.nCount);
-    for(int i = 0; i < numBase_samples_Pointcloud_m_colors;i++)
+    for(int i = 0; i < asnVal.colors.nCount;i++)
     {
         asn1SccWrappers_Vector4d_fromAsn1(result.colors[i], asnVal.colors.arr[i]);
     }
@@ -50,14 +50,35 @@ template <typename T>
 void asn1SccBase_samples_Pointcloud_m_toAsn1(T & result, const base::samples::Pointcloud_m& baseObj,    asn1SccT_UInt32 length_numBase_samples_Pointcloud_m_points=numBase_samples_Pointcloud_m_points,     asn1SccT_UInt32 length_numBase_samples_Pointcloud_m_colors=numBase_samples_Pointcloud_m_colors)
 {
 
+
     asn1SccBase_Time_toAsn1(result.time, baseObj.time);
 
-    for(int i = 0; i < numBase_samples_Pointcloud_m_points;i++)
+    if( baseObj.points.size() > numBase_samples_Pointcloud_m_points)
+    {
+        fprintf(stderr, "WARNING:  truncated points of asn1SccBase_samples_Pointcloud_m to %lld elements.\n",numBase_samples_Pointcloud_m_points);
+        result.points.nCount = numBase_samples_Pointcloud_m_points;
+    }
+    else
+    {
+        result.points.nCount = baseObj.points.size();
+    }
+
+    for(int i = 0; i < result.points.nCount;i++)
     {
         asn1SccWrappers_Vector3d_toAsn1(result.points.arr[i], baseObj.points[i]);
     }
 
-    for(int i = 0; i < numBase_samples_Pointcloud_m_colors;i++)
+    if( baseObj.colors.size() > numBase_samples_Pointcloud_m_colors)
+    {
+        fprintf(stderr, "WARNING:  truncated colors of asn1SccBase_samples_Pointcloud_m to %lld elements.\n",numBase_samples_Pointcloud_m_colors);
+        result.colors.nCount = numBase_samples_Pointcloud_m_colors;
+    }
+    else
+    {
+        result.colors.nCount = baseObj.colors.size();
+    }
+
+    for(int i = 0; i < result.colors.nCount;i++)
     {
         asn1SccWrappers_Vector4d_toAsn1(result.colors.arr[i], baseObj.colors[i]);
     }

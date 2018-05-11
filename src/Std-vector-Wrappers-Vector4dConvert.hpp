@@ -28,7 +28,7 @@ void asn1SccStd_vector_Wrappers_Vector4d_fromAsn1(std::vector<wrappers::Matrix<d
 {
 
     result.resize(asnVal.nCount);
-    for (int i = 0; i < length_numStd_vector_Wrappers_Vector4d; i++)
+    for (int i = 0; i < asnVal.nCount; i++)
     {
 		asn1SccWrappers_Vector4d_fromAsn1(result[i], asnVal.arr[i]);
     }
@@ -40,11 +40,17 @@ template <typename T>
 void asn1SccStd_vector_Wrappers_Vector4d_toAsn1(T & result, const std::vector<wrappers::Matrix<double,4,1>>& baseObj,    asn1SccT_UInt32 length_numStd_vector_Wrappers_Vector4d=numStd_vector_Wrappers_Vector4d)
 {
 
-    for (int i = 0; i < length_numStd_vector_Wrappers_Vector4d; i++)
+    if( baseObj.size() > length_numStd_vector_Wrappers_Vector4d)
     {
-        result.arr[i] = baseObj[i];
+        fprintf(stderr, "WARNING:  truncated asn1SccStd_vector_Wrappers_Vector4d to %lld elements.\n",length_numStd_vector_Wrappers_Vector4d);
+        result.nCount = length_numStd_vector_Wrappers_Vector4d;
     }
-    result.nCount = length_numStd_vector_Wrappers_Vector4d;
+    else
+        result.nCount = baseObj.size();
+    for (int i = 0; i < result.nCount; i++)
+    {
+		asn1SccWrappers_Vector4d_toAsn1(result.arr[i], baseObj[i]);
+    }
 }
 
 

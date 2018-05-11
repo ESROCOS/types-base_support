@@ -28,13 +28,13 @@ void asn1SccBase_NamedVector_Base_JointTrajectory_fromAsn1(base::NamedVector<std
 {
 
     result.names.resize(asnVal.names.nCount);
-    for(int i = 0; i < numBase_NamedVector_Base_JointTrajectory_names;i++)
+    for(int i = 0; i < asnVal.names.nCount;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
 
     result.elements.resize(asnVal.elements.nCount);
-    for(int i = 0; i < numBase_NamedVector_Base_JointTrajectory_elements;i++)
+    for(int i = 0; i < asnVal.elements.nCount;i++)
     {
         asn1SccBase_JointTrajectory_fromAsn1(result.elements[i], asnVal.elements.arr[i]);
     }
@@ -47,12 +47,32 @@ template <typename T>
 void asn1SccBase_NamedVector_Base_JointTrajectory_toAsn1(T & result, const base::NamedVector<std::vector<base::JointState>>& baseObj,    asn1SccT_UInt32 length_numBase_NamedVector_Base_JointTrajectory_names=numBase_NamedVector_Base_JointTrajectory_names,     asn1SccT_UInt32 length_numBase_NamedVector_Base_JointTrajectory_elements=numBase_NamedVector_Base_JointTrajectory_elements)
 {
 
-    for(int i = 0; i < numBase_NamedVector_Base_JointTrajectory_names;i++)
+    if( baseObj.names.size() > numBase_NamedVector_Base_JointTrajectory_names)
+    {
+        fprintf(stderr, "WARNING:  truncated names of asn1SccBase_NamedVector_Base_JointTrajectory to %lld elements.\n",numBase_NamedVector_Base_JointTrajectory_names);
+        result.names.nCount = numBase_NamedVector_Base_JointTrajectory_names;
+    }
+    else
+    {
+        result.names.nCount = baseObj.names.size();
+    }
+
+    for(int i = 0; i < result.names.nCount;i++)
     {
         asn1SccT_String_toAsn1(result.names.arr[i], baseObj.names[i]);
     }
 
-    for(int i = 0; i < numBase_NamedVector_Base_JointTrajectory_elements;i++)
+    if( baseObj.elements.size() > numBase_NamedVector_Base_JointTrajectory_elements)
+    {
+        fprintf(stderr, "WARNING:  truncated elements of asn1SccBase_NamedVector_Base_JointTrajectory to %lld elements.\n",numBase_NamedVector_Base_JointTrajectory_elements);
+        result.elements.nCount = numBase_NamedVector_Base_JointTrajectory_elements;
+    }
+    else
+    {
+        result.elements.nCount = baseObj.elements.size();
+    }
+
+    for(int i = 0; i < result.elements.nCount;i++)
     {
         asn1SccBase_JointTrajectory_toAsn1(result.elements.arr[i], baseObj.elements[i]);
     }

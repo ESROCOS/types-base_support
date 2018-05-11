@@ -28,7 +28,7 @@ void asn1SccBase_JointTrajectory_fromAsn1(std::vector<base::JointState>& result,
 {
 
     result.resize(asnVal.nCount);
-    for (int i = 0; i < length_numBase_JointTrajectory; i++)
+    for (int i = 0; i < asnVal.nCount; i++)
     {
 		asn1SccBase_JointState_fromAsn1(result[i], asnVal.arr[i]);
     }
@@ -40,11 +40,17 @@ template <typename T>
 void asn1SccBase_JointTrajectory_toAsn1(T & result, const std::vector<base::JointState>& baseObj,    asn1SccT_UInt32 length_numBase_JointTrajectory=numBase_JointTrajectory)
 {
 
-    for (int i = 0; i < length_numBase_JointTrajectory; i++)
+    if( baseObj.size() > length_numBase_JointTrajectory)
     {
-        result.arr[i] = baseObj[i];
+        fprintf(stderr, "WARNING:  truncated asn1SccBase_JointTrajectory to %lld elements.\n",length_numBase_JointTrajectory);
+        result.nCount = length_numBase_JointTrajectory;
     }
-    result.nCount = length_numBase_JointTrajectory;
+    else
+        result.nCount = baseObj.size();
+    for (int i = 0; i < result.nCount; i++)
+    {
+		asn1SccBase_JointState_toAsn1(result.arr[i], baseObj[i]);
+    }
 }
 
 

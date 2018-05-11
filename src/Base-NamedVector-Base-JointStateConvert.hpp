@@ -28,7 +28,7 @@ void asn1SccBase_NamedVector_Base_JointState_fromAsn1(base::NamedVector<base::Jo
 {
 
     result.names.resize(asnVal.names.nCount);
-    for(int i = 0; i < numBase_NamedVector_Base_JointState_names;i++)
+    for(int i = 0; i < asnVal.names.nCount;i++)
     {
         asn1SccT_String_fromAsn1(result.names[i], asnVal.names.arr[i]);
     }
@@ -43,10 +43,21 @@ template <typename T>
 void asn1SccBase_NamedVector_Base_JointState_toAsn1(T & result, const base::NamedVector<base::JointState>& baseObj,    asn1SccT_UInt32 length_numBase_NamedVector_Base_JointState_names=numBase_NamedVector_Base_JointState_names)
 {
 
-    for(int i = 0; i < numBase_NamedVector_Base_JointState_names;i++)
+    if( baseObj.names.size() > numBase_NamedVector_Base_JointState_names)
+    {
+        fprintf(stderr, "WARNING:  truncated names of asn1SccBase_NamedVector_Base_JointState to %lld elements.\n",numBase_NamedVector_Base_JointState_names);
+        result.names.nCount = numBase_NamedVector_Base_JointState_names;
+    }
+    else
+    {
+        result.names.nCount = baseObj.names.size();
+    }
+
+    for(int i = 0; i < result.names.nCount;i++)
     {
         asn1SccT_String_toAsn1(result.names.arr[i], baseObj.names[i]);
     }
+
 
     asn1SccBase_JointTrajectory_toAsn1(result.elements, baseObj.elements);
 
