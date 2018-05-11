@@ -70,7 +70,7 @@ void asn1SccBase_samples_Pointcloud_toAsn1(T & result, const base::samples::Poin
     for(int i = 0; i < result.points.nCount;i++)
     {
 		wrappers::Vector3d points_intermediate;
-		Base_Vector3d_fromIntermediate(points_intermediate, baseObj.points[i]);
+		Base_Vector3d_toIntermediate(points_intermediate, baseObj.points[i]);
 		asn1SccWrappers_Vector3d_toAsn1(result.points.arr[i], points_intermediate);
     }
 
@@ -87,7 +87,7 @@ void asn1SccBase_samples_Pointcloud_toAsn1(T & result, const base::samples::Poin
     for(int i = 0; i < result.colors.nCount;i++)
     {
 		wrappers::Vector4d colors_intermediate;
-		Base_Vector4d_fromIntermediate(colors_intermediate, baseObj.colors[i]);
+		Base_Vector4d_toIntermediate(colors_intermediate, baseObj.colors[i]);
 		asn1SccWrappers_Vector4d_toAsn1(result.colors.arr[i], colors_intermediate);
     }
 
