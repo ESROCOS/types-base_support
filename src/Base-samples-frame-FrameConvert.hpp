@@ -47,7 +47,7 @@ void asn1SccBase_samples_frame_Frame_fromAsn1(base::samples::frame::Frame& resul
         asn1SccBase_samples_frame_frame_attrib_t_fromAsn1(result.attributes[i], asnVal.attributes.arr[i]);
     }
 
-    asn1SccBase_samples_frame_frame_size_t_fromAsn1(result.size, asnVal.size);
+    asn1SccBase_samples_frame_frame_size_t_fromAsn1(result.size, asnVal.size_t);
 
     result.data_depth = asnVal.data_depth;
 
@@ -104,7 +104,7 @@ void asn1SccBase_samples_frame_Frame_toAsn1(T & result, const base::samples::fra
     }
 
 
-    asn1SccBase_samples_frame_frame_size_t_toAsn1(result.size, baseObj.size);
+    asn1SccBase_samples_frame_frame_size_t_toAsn1(result.size_t, baseObj.size);
 
 
     result.data_depth = baseObj.data_depth;

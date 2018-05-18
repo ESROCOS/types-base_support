@@ -11,9 +11,9 @@
 
 void asn1SccBase_samples_frame_frame_attrib_t_fromAsn1(base::samples::frame::frame_attrib_t& result, const asn1SccBase_samples_frame_frame_attrib_t& asnVal)
 {
-    asn1SccT_String_fromAsn1(result.data_, asnVal.data_);
+    asn1SccT_String_fromAsn1(result.data_, asnVal.data);
 
-    asn1SccT_String_fromAsn1(result.name_, asnVal.name_);
+    asn1SccT_String_fromAsn1(result.name_, asnVal.name_t);
 
 }
 
@@ -21,9 +21,9 @@ void asn1SccBase_samples_frame_frame_attrib_t_fromAsn1(base::samples::frame::fra
 
 void asn1SccBase_samples_frame_frame_attrib_t_toAsn1(asn1SccBase_samples_frame_frame_attrib_t& result, const base::samples::frame::frame_attrib_t& baseObj)
 {
-    asn1SccT_String_toAsn1(result.data_, baseObj.data_);
+    asn1SccT_String_toAsn1(result.data, baseObj.data_);
 
-    asn1SccT_String_toAsn1(result.name_, baseObj.name_);
+    asn1SccT_String_toAsn1(result.name_t, baseObj.name_);
 
 }
 
