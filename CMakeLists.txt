@@ -11,7 +11,6 @@ project(base_support)
 include($ENV{ESROCOS_CMAKE})
 esrocos_init()
 
-esrocos_init()
 
 add_subdirectory(src)
 
