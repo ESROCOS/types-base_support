@@ -25,7 +25,7 @@
 //Conversion functions from asn1 to c++ type
 
 template <typename T>
-void asn1SccBase_JointsTrajectory_fromAsn1(base::JointsTrajectory& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_JointsTrajectory_names=numBase_JointsTrajectory_names,     asn1SccT_UInt32 length_numBase_JointsTrajectory_elements=numBase_JointsTrajectory_elements,     asn1SccT_UInt32 length_numBase_JointsTrajectory_times_t=numBase_JointsTrajectory_times_t)
+void asn1SccBase_JointsTrajectory_fromAsn1(base::JointsTrajectory& result, const T & asnVal,    asn1SccT_UInt32 length_numBase_JointsTrajectory_names=numBase_JointsTrajectory_names,     asn1SccT_UInt32 length_numBase_JointsTrajectory_elements=numBase_JointsTrajectory_elements,     asn1SccT_UInt32 length_numBase_JointsTrajectory_times_val=numBase_JointsTrajectory_times_val)
 {
 
     result.names.resize(asnVal.names.nCount);
@@ -40,10 +40,10 @@ void asn1SccBase_JointsTrajectory_fromAsn1(base::JointsTrajectory& result, const
         asn1SccBase_JointTrajectory_fromAsn1(result.elements[i], asnVal.elements.arr[i]);
     }
 
-    result.times.resize(asnVal.times_t.nCount);
-    for(int i = 0; i < asnVal.times_t.nCount;i++)
+    result.times.resize(asnVal.times_val.nCount);
+    for(int i = 0; i < asnVal.times_val.nCount;i++)
     {
-        asn1SccBase_Time_fromAsn1(result.times[i], asnVal.times_t.arr[i]);
+        asn1SccBase_Time_fromAsn1(result.times[i], asnVal.times_val.arr[i]);
     }
 
 }
@@ -51,7 +51,7 @@ void asn1SccBase_JointsTrajectory_fromAsn1(base::JointsTrajectory& result, const
 //Conversion functions from C++ to Asn1 type
 
 template <typename T>
-void asn1SccBase_JointsTrajectory_toAsn1(T & result, const base::JointsTrajectory& baseObj,    asn1SccT_UInt32 length_numBase_JointsTrajectory_names=numBase_JointsTrajectory_names,     asn1SccT_UInt32 length_numBase_JointsTrajectory_elements=numBase_JointsTrajectory_elements,     asn1SccT_UInt32 length_numBase_JointsTrajectory_times_t=numBase_JointsTrajectory_times_t)
+void asn1SccBase_JointsTrajectory_toAsn1(T & result, const base::JointsTrajectory& baseObj,    asn1SccT_UInt32 length_numBase_JointsTrajectory_names=numBase_JointsTrajectory_names,     asn1SccT_UInt32 length_numBase_JointsTrajectory_elements=numBase_JointsTrajectory_elements,     asn1SccT_UInt32 length_numBase_JointsTrajectory_times_val=numBase_JointsTrajectory_times_val)
 {
 
     if( baseObj.names.size() > numBase_JointsTrajectory_names)
@@ -84,19 +84,19 @@ void asn1SccBase_JointsTrajectory_toAsn1(T & result, const base::JointsTrajector
         asn1SccBase_JointTrajectory_toAsn1(result.elements.arr[i], baseObj.elements[i]);
     }
 
-    if( baseObj.times.size() > numBase_JointsTrajectory_times_t)
+    if( baseObj.times.size() > numBase_JointsTrajectory_times_val)
     {
-        fprintf(stderr, "WARNING:  truncated times_t of asn1SccBase_JointsTrajectory to %lld elements.\n",numBase_JointsTrajectory_times_t);
-        result.times_t.nCount = numBase_JointsTrajectory_times_t;
+        fprintf(stderr, "WARNING:  truncated times_val of asn1SccBase_JointsTrajectory to %lld elements.\n",numBase_JointsTrajectory_times_val);
+        result.times_val.nCount = numBase_JointsTrajectory_times_val;
     }
     else
     {
-        result.times_t.nCount = baseObj.times.size();
+        result.times_val.nCount = baseObj.times.size();
     }
 
-    for(int i = 0; i < result.times_t.nCount;i++)
+    for(int i = 0; i < result.times_val.nCount;i++)
     {
-        asn1SccBase_Time_toAsn1(result.times_t.arr[i], baseObj.times[i]);
+        asn1SccBase_Time_toAsn1(result.times_val.arr[i], baseObj.times[i]);
     }
 
 }
