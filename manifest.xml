@@ -8,7 +8,6 @@
     <license>GPLv2</license>
 
     <depend package="base/cmake"/>
-    <depend package="base/orogen/types"/>
     <depend package="base/types"/>
     <depend package="types/base"/>
     <depend package="eigen3"/>
