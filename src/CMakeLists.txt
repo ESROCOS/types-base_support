@@ -24,9 +24,11 @@ endif()
 if(${CMAKE_CROSSCOMPILING})
     # Compiling for RTEMS, build static library
     add_library(${LIB} STATIC ${SOURCES})
+    message(STATUS "compiling .a")
 else()
     # Compiling natively, build shared library	
     add_library(${LIB} SHARED ${SOURCES})
+    message(STATUS "compiling .so")
 endif()
 
 set_target_properties(${LIB} PROPERTIES LINKER_LANGUAGE CXX)
