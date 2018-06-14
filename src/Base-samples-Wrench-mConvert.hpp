@@ -21,7 +21,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Base-TimeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_Wrench_m_fromAsn1(base::samples::Wrench_m& result, const asn1SccBase_samples_Wrench_m& asnVal);
 

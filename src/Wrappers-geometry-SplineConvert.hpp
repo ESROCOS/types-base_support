@@ -19,7 +19,6 @@
 
 #include "Wrappers-geometry-SplineTypeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

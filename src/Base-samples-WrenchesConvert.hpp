@@ -21,7 +21,6 @@
 #include "Base-WrenchConvert.hpp"
 #include "Base-TimeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

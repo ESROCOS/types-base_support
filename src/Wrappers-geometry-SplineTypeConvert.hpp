@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccWrappers_geometry_SplineType_fromAsn1(wrappers::geometry::SplineType& result, const asn1SccWrappers_geometry_SplineType& asnVal);
 

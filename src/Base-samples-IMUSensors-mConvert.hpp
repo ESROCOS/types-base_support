@@ -22,7 +22,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Wrappers-Vector3dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_IMUSensors_m_fromAsn1(base::samples::IMUSensors_m& result, const asn1SccBase_samples_IMUSensors_m& asnVal);
 

@@ -21,7 +21,6 @@
 #include "Wrappers-QuaterniondConvert.hpp"
 #include "Wrappers-Matrix6dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_TransformWithCovariance_m_fromAsn1(base::TransformWithCovariance_m& result, const asn1SccBase_TransformWithCovariance_m& asnVal);
 

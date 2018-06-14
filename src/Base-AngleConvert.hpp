@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Angle_fromAsn1(base::Angle& result, const asn1SccBase_Angle& asnVal);
 

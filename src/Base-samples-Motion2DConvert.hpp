@@ -20,7 +20,6 @@
 #include "Base-AngleConvert.hpp"
 #include "Base-TimeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_Motion2D_fromAsn1(base::samples::Motion2D& result, const asn1SccBase_samples_Motion2D& asnVal);
 

@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccWrappers_AngleAxisd_fromAsn1(wrappers::AngleAxis<double>& result, const asn1SccWrappers_AngleAxisd& asnVal);
 

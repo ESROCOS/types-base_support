@@ -20,7 +20,6 @@
 #include "T-StringConvert.hpp"
 #include "Std-orogen-typekits-mtype-std-vector-base-JointTransformConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

@@ -21,7 +21,6 @@
 #include "Base-TransformWithCovarianceConvert.hpp"
 #include "Base-TwistWithCovarianceConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_BodyState_fromAsn1(base::samples::BodyState& result, const asn1SccBase_samples_BodyState& asnVal);
 

@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_commands_Speed6D_fromAsn1(base::commands::Speed6D& result, const asn1SccBase_commands_Speed6D& asnVal);
 

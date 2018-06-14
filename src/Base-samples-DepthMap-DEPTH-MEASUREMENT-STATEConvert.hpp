@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_fromAsn1(base::samples::DepthMap::DEPTH_MEASUREMENT_STATE& result, const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE& asnVal);
 

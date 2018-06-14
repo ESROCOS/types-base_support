@@ -21,7 +21,6 @@
 #include "Base-samples-frame-FrameConvert.hpp"
 #include "Base-samples-frame-FrameConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_frame_FramePair_fromAsn1(base::samples::frame::FramePair& result, const asn1SccBase_samples_frame_FramePair& asnVal);
 

@@ -20,7 +20,6 @@
 
 #include "Base-JointTransform-mConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Temperature_fromAsn1(base::Temperature& result, const asn1SccBase_Temperature& asnVal);
 

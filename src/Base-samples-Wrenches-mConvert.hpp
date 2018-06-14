@@ -21,7 +21,6 @@
 #include "Std-orogen-typekits-mtype-std-vector-base-WrenchConvert.hpp"
 #include "Base-TimeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

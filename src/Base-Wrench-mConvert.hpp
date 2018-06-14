@@ -20,7 +20,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Wrappers-Vector3dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Wrench_m_fromAsn1(base::Wrench_m& result, const asn1SccBase_Wrench_m& asnVal);
 

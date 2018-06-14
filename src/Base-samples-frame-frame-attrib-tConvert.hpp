@@ -20,7 +20,6 @@
 #include "T-StringConvert.hpp"
 #include "T-StringConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_frame_frame_attrib_t_fromAsn1(base::samples::frame::frame_attrib_t& result, const asn1SccBase_samples_frame_frame_attrib_t& asnVal);
 

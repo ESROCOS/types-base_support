@@ -21,7 +21,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Wrappers-Matrix6dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_TwistWithCovariance_fromAsn1(base::TwistWithCovariance& result, const asn1SccBase_TwistWithCovariance& asnVal);
 

@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccWrappers_Quaterniond_fromAsn1(wrappers::Quaternion<double>& result, const asn1SccWrappers_Quaterniond& asnVal);
 

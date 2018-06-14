@@ -20,7 +20,6 @@
 #include "Base-JointStateConvert.hpp"
 #include "Base-JointStateConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_JointLimitRange_fromAsn1(base::JointLimitRange& result, const asn1SccBase_JointLimitRange& asnVal);
 

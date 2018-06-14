@@ -20,7 +20,6 @@
 #include "T-StringConvert.hpp"
 #include "Base-WrenchConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

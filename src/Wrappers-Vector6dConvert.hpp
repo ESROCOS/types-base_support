@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccWrappers_Vector6d_fromAsn1(wrappers::Matrix<double,6,1>& result, const asn1SccWrappers_Vector6d& asnVal);
 

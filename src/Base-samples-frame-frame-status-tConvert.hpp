@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_frame_frame_status_t_fromAsn1(base::samples::frame::frame_status_t& result, const asn1SccBase_samples_frame_frame_status_t& asnVal);
 

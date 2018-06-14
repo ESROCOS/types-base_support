@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_LASER_RANGE_ERRORS_fromAsn1(base::samples::LASER_RANGE_ERRORS& result, const asn1SccBase_samples_LASER_RANGE_ERRORS& asnVal);
 

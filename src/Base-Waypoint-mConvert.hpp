@@ -19,7 +19,6 @@
 
 #include "Wrappers-Vector3dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Waypoint_m_fromAsn1(base::Waypoint_m& result, const asn1SccBase_Waypoint_m& asnVal);
 

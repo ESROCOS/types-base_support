@@ -22,7 +22,6 @@
 #include "Base-samples-DepthMap-PROJECTION-TYPEConvert.hpp"
 #include "Base-samples-DepthMap-PROJECTION-TYPEConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

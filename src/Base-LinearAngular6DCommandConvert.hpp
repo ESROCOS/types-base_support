@@ -21,7 +21,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Wrappers-Vector3dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_LinearAngular6DCommand_fromAsn1(base::commands::LinearAngular6DCommand& result, const asn1SccBase_LinearAngular6DCommand& asnVal);
 

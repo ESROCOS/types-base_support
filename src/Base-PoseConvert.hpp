@@ -20,7 +20,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Wrappers-QuaterniondConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Pose_fromAsn1(base::Pose& result, const asn1SccBase_Pose& asnVal);
 

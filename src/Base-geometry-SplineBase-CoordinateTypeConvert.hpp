@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_geometry_SplineBase_CoordinateType_fromAsn1(base::geometry::SplineBase::CoordinateType& result, const asn1SccBase_geometry_SplineBase_CoordinateType& asnVal);
 

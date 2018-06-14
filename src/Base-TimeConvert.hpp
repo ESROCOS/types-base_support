@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Time_fromAsn1(base::Time& result, const asn1SccBase_Time& asnVal);
 

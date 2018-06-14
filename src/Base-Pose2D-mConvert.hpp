@@ -19,7 +19,6 @@
 
 #include "Wrappers-Vector2dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_Pose2D_m_fromAsn1(base::Pose2D_m& result, const asn1SccBase_Pose2D_m& asnVal);
 

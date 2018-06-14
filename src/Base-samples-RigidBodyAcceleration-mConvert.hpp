@@ -23,7 +23,6 @@
 #include "Wrappers-Vector3dConvert.hpp"
 #include "Wrappers-Matrix3dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_RigidBodyAcceleration_m_fromAsn1(base::samples::RigidBodyAcceleration_m& result, const asn1SccBase_samples_RigidBodyAcceleration_m& asnVal);
 

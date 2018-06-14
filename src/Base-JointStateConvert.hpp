@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_JointState_fromAsn1(base::JointState& result, const asn1SccBase_JointState& asnVal);
 

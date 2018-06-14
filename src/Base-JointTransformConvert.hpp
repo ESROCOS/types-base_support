@@ -21,7 +21,6 @@
 #include "T-StringConvert.hpp"
 #include "Wrappers-Vector3dConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_JointTransform_fromAsn1(base::JointTransform& result, const asn1SccBase_JointTransform& asnVal);
 

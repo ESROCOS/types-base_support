@@ -20,7 +20,6 @@
 #include "T-StringConvert.hpp"
 #include "Base-JointLimitRangeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

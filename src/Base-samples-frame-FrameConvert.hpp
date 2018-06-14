@@ -24,7 +24,6 @@
 #include "Base-samples-frame-frame-mode-tConvert.hpp"
 #include "Base-samples-frame-frame-status-tConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 
 template <typename T>

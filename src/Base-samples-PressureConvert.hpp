@@ -19,7 +19,6 @@
 
 #include "Base-TimeConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_samples_Pressure_fromAsn1(base::samples::Pressure& result, const asn1SccBase_samples_Pressure& asnVal);
 

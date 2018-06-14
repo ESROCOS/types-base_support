@@ -19,7 +19,6 @@
 
 #include "Base-AngleConvert.hpp"
 
-
 //Conversion functions from asn1 to c++ type
 void asn1SccBase_commands_Motion2D_fromAsn1(base::commands::Motion2D& result, const asn1SccBase_commands_Motion2D& asnVal);
 
