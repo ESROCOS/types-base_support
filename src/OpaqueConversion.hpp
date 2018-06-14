@@ -17,7 +17,19 @@
 #include <base/geometry/Spline.hpp>
 #include <base/wrappers/geometry/Spline.hpp>
 #include <base/samples/Frame.hpp>
-#include <rtt/extras/ReadOnlyPointer.hpp>
+
+# if defined( __GNUC__ ) && defined( __sparc__ ) 
+#  warning Compiling for SPARC, but temporarily defining __i386__ to trick RTT to compile the headers (see rtt-config.h)
+#  define __i386__
+#  ifndef PTHREAD_MUTEX_RECURSIVE_NP
+#   warning Defining PTHREAD_MUTEX_RECURSIVE_NP, needed by RTT headers
+#   define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+#  endif
+#  include <rtt/extras/ReadOnlyPointer.hpp>
+#  undef __i386__
+# else
+#  include <rtt/extras/ReadOnlyPointer.hpp>
+# endif
 
 //Conversion functions from the instanced type to the marshaled type
 
