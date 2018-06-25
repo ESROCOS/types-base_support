@@ -13,10 +13,14 @@ esrocos_asn1_types_package(${LIB}_local_types
     OUTDIR asn1
     IMPORT types/base)
     
-# Find libraries in ESROCOS' install directory
 if(${CMAKE_CROSSCOMPILING})
-    link_directories(${CMAKE_INSTALL_PREFIX}/${RCC_TARGET}/lib)
+    # Find libraries in ESROCOS' target-specific directory
+    link_directories(${CMAKE_INSTALL_PREFIX}/${RTEMS_TARGET}/lib)
+
+    # Create link to Boost headers (cross-compile can use Boost header-only libraries, but cannot directly include /usr/include)
+    execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "/usr/include/boost" "${CMAKE_CURRENT_BINARY_DIR}/boost")
 else()
+    # Find libraries in ESROCOS' regular directory
     link_directories(${CMAKE_INSTALL_PREFIX}/lib)
 endif()
 
@@ -24,11 +28,9 @@ endif()
 if(${CMAKE_CROSSCOMPILING})
     # Compiling for RTEMS, build static library
     add_library(${LIB} STATIC ${SOURCES})
-    message(STATUS "compiling .a")
 else()
-    # Compiling natively, build shared library	
+    # Compiling natively, build shared library    
     add_library(${LIB} SHARED ${SOURCES})
-    message(STATUS "compiling .so")
 endif()
 
 set_target_properties(${LIB} PROPERTIES LINKER_LANGUAGE CXX)
@@ -44,25 +46,21 @@ target_compile_definitions(${LIB} PUBLIC OROCOS_TARGET=$ENV{OROCOS_TARGET})
 add_dependencies(${LIB} ${LIB}_local_types_generate_c)
 
 # Install headers, libraries and pkg-config file
+if(CMAKE_CROSSCOMPILING)
+    set(TARGET_INSTALL_PREFIX ${RTEMS_TARGET})
+endif()
+
 install(FILES ${HEADERS}
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${CMAKE_PROJECT_NAME}
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${CMAKE_PROJECT_NAME}
 )
 
-if(CMAKE_CROSSCOMPILING) 
-    install(TARGETS ${LIB} DESTINATION ${CMAKE_INSTALL_PREFIX}/${RCC_TARGET}/lib)
-else()
-    install(TARGETS ${LIB} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-endif()
+install(TARGETS ${LIB} DESTINATION ${CMAKE_INSTALL_PREFIX}/${TARGET_INSTALL_PREFIX}/lib)
 
-if(CMAKE_CROSSCOMPILING)
-    CONFIGURE_FILE("${LIB}.pc.in" "${LIB}.pc" @ONLY)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${LIB}.pc
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/${RCC_TARGET}/lib/pkgconfig
-    )
-else()
-    CONFIGURE_FILE("${LIB}.pc.in" "${LIB}.pc" @ONLY)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${LIB}.pc
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig
-    )
-endif()
+# Add dependencies specific to base_support (replaced in .pc.in configuration file)
+set(DEPS_PKGCONFIG "base-types base-transport-corba-$ENV{OROCOS_TARGET}")
+
+CONFIGURE_FILE("${LIB}.pc.in" "${LIB}.pc" @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${LIB}.pc
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/${TARGET_INSTALL_PREFIX}/lib/pkgconfig
+)
 
