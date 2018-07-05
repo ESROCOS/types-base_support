@@ -1,10 +1,4 @@
 /*
- * H2020 ESROCOS Project
- * Company: GMV Aerospace & Defence S.A.U.
- * Licence: GPLv2
- */
-
-/*
  * Conversion functions for asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint.
  */
 
