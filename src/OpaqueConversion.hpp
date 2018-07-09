@@ -11,6 +11,7 @@
 #ifndef OPAQUE_CONVERSION_H
 #define OPAQUE_CONVERSION_H
 
+#include "baseTypes.h"
 #include <base/Eigen.hpp>
 #include <base/wrappers/Eigen.hpp>
 #include <base/geometry/Spline.hpp>
@@ -39,6 +40,7 @@ void Base_Vector3d_toIntermediate(wrappers::Vector3d& result, const base::Vector
 void Base_Affine3d_fromIntermediate(base::Affine3d& result, const wrappers::Matrix4d& cppMarshall);
 
 void Base_Affine3d_toIntermediate(wrappers::Matrix4d& result, const base::Affine3d& cppVal);
+
 void Base_Matrix4d_fromIntermediate(base::Matrix4d& result, const wrappers::Matrix4d& cppMarshall);
 
 void Base_Matrix4d_toIntermediate(wrappers::Matrix4d& result, const base::Matrix4d& cppVal);
@@ -70,6 +72,7 @@ void Base_MatrixXd_toIntermediate(wrappers::MatrixXd& result, const base::Matrix
 void Base_geometry_Spline_1__fromIntermediate(base::geometry::Spline<1>& result, const wrappers::geometry::Spline& cppMarshall);
 
 void Base_geometry_Spline_1__toIntermediate(wrappers::geometry::Spline& result, const base::geometry::Spline<1>& cppVal);
+
 void Base_geometry_Spline_3__fromIntermediate(base::geometry::Spline<3>& result, const wrappers::geometry::Spline& cppMarshall);
 
 void Base_geometry_Spline_3__toIntermediate(wrappers::geometry::Spline& result, const base::geometry::Spline<3>& cppVal);
@@ -97,5 +100,44 @@ void Base_Quaterniond_toIntermediate(wrappers::Quaterniond& result, const base::
 void Base_Matrix6d_fromIntermediate(base::Matrix6d& result, const wrappers::Matrix6d& cppMarshall);
 
 void Base_Matrix6d_toIntermediate(wrappers::Matrix6d& result, const base::Matrix6d& cppVal);
+
+// Direct conversions for wrappers (fully manually coded)
+
+void asn1Scc_Vector2d_fromAsn1(base::Vector2d& result, const asn1SccWrappers_Vector2d& asnVal);
+void asn1Scc_Vector2d_toAsn1(asn1SccWrappers_Vector2d& result, const base::Vector2d& baseObj);
+
+void asn1Scc_Vector3d_fromAsn1(base::Vector3d& result, const asn1SccWrappers_Vector3d& asnVal);
+void asn1Scc_Vector3d_toAsn1(asn1SccWrappers_Vector3d& result, const base::Vector3d& baseObj);
+
+void asn1Scc_Vector4d_fromAsn1(base::Vector4d& result, const asn1SccWrappers_Vector4d& asnVal);
+void asn1Scc_Vector4d_toAsn1(asn1SccWrappers_Vector4d& result, const base::Vector4d& baseObj);
+
+void asn1Scc_Vector6d_fromAsn1(base::Vector6d& result, const asn1SccWrappers_Vector6d& asnVal);
+void asn1Scc_Vector6d_toAsn1(asn1SccWrappers_Vector6d& result, const base::Vector6d& baseObj);
+
+void asn1Scc_VectorXd_fromAsn1(base::VectorXd& result, const asn1SccWrappers_VectorXd& asnVal);
+void asn1Scc_VectorXd_toAsn1(asn1SccWrappers_VectorXd& result, const base::VectorXd& baseObj);
+
+void asn1Scc_Matrix2d_fromAsn1(base::Matrix2d& result, const asn1SccWrappers_Matrix2d& asnVal);
+void asn1Scc_Matrix2d_toAsn1(asn1SccWrappers_Matrix2d& result, const base::Matrix2d& baseObj);
+
+void asn1Scc_Matrix3d_fromAsn1(base::Matrix3d& result, const asn1SccWrappers_Matrix3d& asnVal);
+void asn1Scc_Matrix3d_toAsn1(asn1SccWrappers_Matrix3d& result, const base::Matrix3d& baseObj);
+
+void asn1Scc_Matrix4d_fromAsn1(base::Matrix4d& result, const asn1SccWrappers_Matrix4d& asnVal);
+void asn1Scc_Matrix4d_toAsn1(asn1SccWrappers_Matrix4d& result, const base::Matrix4d& baseObj);
+
+void asn1Scc_Matrix6d_fromAsn1(base::Matrix6d& result, const asn1SccWrappers_Matrix6d& asnVal);
+void asn1Scc_Matrix6d_toAsn1(asn1SccWrappers_Matrix6d& result, const base::Matrix6d& baseObj);
+
+void asn1Scc_MatrixXd_fromAsn1(base::MatrixXd& result, const asn1SccWrappers_MatrixXd& asnVal);
+void asn1Scc_MatrixXd_toAsn1(asn1SccWrappers_MatrixXd& result, const base::MatrixXd& baseObj);
+
+void asn1Scc_Quaterniond_fromAsn1(base::Quaterniond& result, const asn1SccWrappers_Quaterniond& asnVal);
+void asn1Scc_Quaterniond_toAsn1(asn1SccWrappers_Quaterniond& result, const base::Quaterniond& baseObj);
+
+void asn1Scc_AngleAxisd_fromAsn1(base::AngleAxisd& result, const asn1SccWrappers_AngleAxisd& asnVal);
+void asn1Scc_AngleAxisd_toAsn1(asn1SccWrappers_AngleAxisd& result, const base::AngleAxisd& baseObj);
+
 
 #endif //OPAQUE_CONVERSION_H
