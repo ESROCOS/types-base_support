@@ -22,8 +22,7 @@ void Vector3d_fromAsn1(base::Vector3d& result, const asn1SccVector3d& asnVal)
 
 void Vector3d_toAsn1(asn1SccVector3d& result, const base::Vector3d& baseObj)
 {
-    result.nCount = 3;
-    for (int i = 0; i < result.nCount; i++)
+    for (int i = 0; i < 3; i++)
     {
         result.arr[i] = baseObj[i];
     }

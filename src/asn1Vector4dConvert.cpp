@@ -21,8 +21,7 @@ void Vector4d_fromAsn1(base::Vector4d& result, const asn1SccVector4d& asnVal)
 
 void Vector4d_toAsn1(asn1SccVector4d& result, const base::Vector4d& baseObj)
 {
-    result.nCount = 4;
-    for (int i = 0; i < result.nCount; i++)
+    for (int i = 0; i < 4; i++)
     {
         result.arr[i] = baseObj[i];
     }

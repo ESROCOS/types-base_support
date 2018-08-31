@@ -14,7 +14,6 @@
 asn1SccVector4d Vector4d_create(double x, double y, double z, double w)
 {
     asn1SccVector4d result;
-    result.nCount = 4;
     result.arr[0] = x;
     result.arr[1] = y;
     result.arr[2] = z;

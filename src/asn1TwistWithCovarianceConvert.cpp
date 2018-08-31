@@ -14,17 +14,17 @@
 
 void TwistWithCovariance_fromAsn1(base::TwistWithCovariance& result, const asn1SccTwistWithCovariance& asnVal)
 {
-    Vector3d_fromAsn1(result.vel, asnVal.vel);
-    Vector3d_fromAsn1(result.rot, asnVal.rot);
-    Matrix6d_fromAsn1(result.cov, asnVal.cov);
+    Vector3d_fromAsn1(result.vel, asnVal.data.vel);
+    Vector3d_fromAsn1(result.rot, asnVal.data.rot);
+    Matrix6d_fromAsn1(result.cov, asnVal.data.cov);
 }
 
 
 void TwistWithCovariance_toAsn1(asn1SccTwistWithCovariance& result, const base::TwistWithCovariance& baseObj)
 {
-    Vector3d_toAsn1(result.vel, baseObj.vel);
-    Vector3d_toAsn1(result.rot, baseObj.rot);
-    Matrix6d_toAsn1(result.cov, baseObj.cov);
+    Vector3d_toAsn1(result.data.vel, baseObj.vel);
+    Vector3d_toAsn1(result.data.rot, baseObj.rot);
+    Matrix6d_toAsn1(result.data.cov, baseObj.cov);
 }
 
 

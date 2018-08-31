@@ -15,7 +15,6 @@
 asn1SccQuaterniond Quaterniond_create(double w, double x, double y, double z)
 {
     asn1SccQuaterniond result;
-    result.nCount = 4;
     result.arr[0] = x;
     result.arr[1] = y;
     result.arr[2] = z;

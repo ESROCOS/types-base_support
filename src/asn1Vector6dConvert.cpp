@@ -21,8 +21,7 @@ void Vector6d_fromAsn1(base::Vector6d& result, const asn1SccVector6d& asnVal)
 
 void Vector6d_toAsn1(asn1SccVector6d& result, const base::Vector6d& baseObj)
 {
-    result.nCount = 6;
-    for (int i = 0; i < result.nCount; i++)
+    for (int i = 0; i < 6; i++)
     {
         result.arr[i] = baseObj[i];
     }

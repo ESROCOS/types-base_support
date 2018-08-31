@@ -14,7 +14,6 @@
 asn1SccVector3d Vector3d_create(double x, double y, double z)
 {
     asn1SccVector3d result;
-    result.nCount = 3;
     result.arr[0] = x;
     result.arr[1] = y;
     result.arr[2] = z;

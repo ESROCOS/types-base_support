@@ -15,17 +15,17 @@
 
 void TransformWithCovariance_fromAsn1(base::TransformWithCovariance& result, const asn1SccTransformWithCovariance& asnVal)
 {
-    Vector3d_fromAsn1(result.translation, asnVal.translation);
-    Orientation_fromAsn1(result.orientation, asnVal.orientation);
-    Matrix6d_fromAsn1(result.cov, asnVal.cov);
+    Vector3d_fromAsn1(result.translation, asnVal.data.translation);
+    Orientation_fromAsn1(result.orientation, asnVal.data.orientation);
+    Matrix6d_fromAsn1(result.cov, asnVal.data.cov);
 }
 
 
 void TransformWithCovariance_toAsn1(asn1SccTransformWithCovariance& result, const base::TransformWithCovariance& baseObj)
 {
-    Vector3d_toAsn1(result.translation, baseObj.translation);
-    Orientation_toAsn1(result.orientation, baseObj.orientation);
-    Matrix6d_toAsn1(result.cov, baseObj.cov);
+    Vector3d_toAsn1(result.data.translation, baseObj.translation);
+    Orientation_toAsn1(result.data.orientation, baseObj.orientation);
+    Matrix6d_toAsn1(result.data.cov, baseObj.cov);
 }
 
 
