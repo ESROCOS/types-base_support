@@ -16,6 +16,7 @@ set(SOURCES
     asn1Motion2DConvert.cpp
     asn1OrientationConvert.cpp
     asn1OrientationUtils.c
+    asn1PointConvert.cpp
     asn1PoseConvert.cpp
     asn1QuaterniondConvert.cpp
     asn1QuaterniondUtils.c
@@ -54,6 +55,7 @@ set(HEADERS
     asn1Motion2DConvert.hpp
     asn1OrientationConvert.hpp
     asn1OrientationUtils.h
+    asn1PointConvert.hpp
     asn1PoseConvert.hpp
     asn1QuaterniondConvert.hpp
     asn1QuaterniondUtils.h
