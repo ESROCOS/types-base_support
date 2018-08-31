@@ -11,7 +11,7 @@
 #include "asn1PointConvert.hpp"
 #include <cmath>
 
-void Point_fromAsn1(base::Vector4d& result, const asn1SccPoint& asnVal)
+void Point_fromAsn1(base::Vector3d& result, const asn1SccPoint& asnVal)
 {
     for (int i = 0; i < 3; i++)
     {
@@ -20,7 +20,7 @@ void Point_fromAsn1(base::Vector4d& result, const asn1SccPoint& asnVal)
     }
 }
 
-void Point_toAsn1(asn1SccPoint& result, const base::Vector4d& baseObj)
+void Point_toAsn1(asn1SccPoint& result, const base::Vector3d& baseObj)
 {
     for (int i = 0; i < 3; i++)
     {
