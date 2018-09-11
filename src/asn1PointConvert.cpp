@@ -16,7 +16,6 @@ void Point_fromAsn1(base::Vector3d& result, const asn1SccPoint& asnVal)
     for (int i = 0; i < 3; i++)
     {
         result[i] = asnVal.arr[i];
-        result[3] = 0;
     }
 }
 
