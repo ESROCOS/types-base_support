@@ -14,7 +14,6 @@
 asn1SccVector6d Vector6d_create(double v0, double v1, double v2, double v3, double v4, double v5)
 {
     asn1SccVector6d result;
-    result.nCount = 6;
     result.arr[0] = v0;
     result.arr[1] = v1;
     result.arr[2] = v2;

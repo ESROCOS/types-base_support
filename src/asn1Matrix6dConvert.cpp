@@ -22,11 +22,9 @@ void Matrix6d_fromAsn1(base::Matrix6d& result, const asn1SccMatrix6d& asnVal)
 
 void Matrix6d_toAsn1(asn1SccMatrix6d& result, const base::Matrix6d& baseObj)
 {
-    result.nCount = 6;
-    for (int j = 0; j < result.nCount; j++)
+    for (int j = 0; j < 6; j++)
     {
-        result.arr[j].nCount = 6;
-        for (int i = 0; i < result.arr[j].nCount; i++)
+        for (int i = 0; i < 6; i++)
         {
             result.arr[j].arr[i] = baseObj(i, j);
         }

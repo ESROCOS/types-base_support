@@ -5,14 +5,13 @@
  */
 
 /*
- * Conversion functions for asn1Vector3d (implementation).
+ * Conversion functions for asn1Point (implementation).
  */
 
-#include "asn1Vector3dConvert.hpp"
-#include "asn1Vector3dUtils.h"
+#include "asn1PointConvert.hpp"
 #include <cmath>
 
-void Vector3d_fromAsn1(base::Vector3d& result, const asn1SccVector3d& asnVal)
+void Point_fromAsn1(base::Vector3d& result, const asn1SccPoint& asnVal)
 {
     for (int i = 0; i < 3; i++)
     {
@@ -20,7 +19,7 @@ void Vector3d_fromAsn1(base::Vector3d& result, const asn1SccVector3d& asnVal)
     }
 }
 
-void Vector3d_toAsn1(asn1SccVector3d& result, const base::Vector3d& baseObj)
+void Point_toAsn1(asn1SccPoint& result, const base::Vector3d& baseObj)
 {
     for (int i = 0; i < 3; i++)
     {

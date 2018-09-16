@@ -16,6 +16,7 @@ set(SOURCES
     asn1Motion2DConvert.cpp
     asn1OrientationConvert.cpp
     asn1OrientationUtils.c
+    asn1PointConvert.cpp
     asn1PoseConvert.cpp
     asn1QuaterniondConvert.cpp
     asn1QuaterniondUtils.c
@@ -54,6 +55,7 @@ set(HEADERS
     asn1Motion2DConvert.hpp
     asn1OrientationConvert.hpp
     asn1OrientationUtils.h
+    asn1PointConvert.hpp
     asn1PoseConvert.hpp
     asn1QuaterniondConvert.hpp
     asn1QuaterniondUtils.h
@@ -77,6 +79,10 @@ set(HEADERS
     ia5stringConvert.hpp
     )
 
+file(GLOB TYPE_SOURCES
+ ${${LIB}_BINARY_DIR}/asn1/*.c
+)
+
 # ASN.1 types are imported and compiled locally to the project, but not installed
 esrocos_asn1_types_package(${LIB}_local_types
     OUTDIR asn1
@@ -86,7 +92,7 @@ esrocos_asn1_types_package(${LIB}_local_types
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
 
 # Target library
-add_library(${LIB} SHARED ${SOURCES})
+add_library(${LIB} SHARED ${SOURCES} ${TYPE_SOURCES})
 set_target_properties(${LIB} PROPERTIES LINKER_LANGUAGE CXX)
 esrocos_pkgconfig_dependency(${LIB}
     eigen3
@@ -95,7 +101,7 @@ target_include_directories(${LIB}
    PUBLIC ${CMAKE_INSTALL_PREFIX}/include
    PRIVATE ${CMAKE_CURRENT_BINARY_DIR}
 )
-add_dependencies(${LIB} ${LIB}_local_types)
+add_dependencies(${LIB} ${LIB}_local_types_generate_c)
 
 # Install headers, libraries and pkg-config file
 install(FILES ${HEADERS}

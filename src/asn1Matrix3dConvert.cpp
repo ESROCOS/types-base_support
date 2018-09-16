@@ -19,11 +19,10 @@ void Matrix3d_fromAsn1(base::Matrix3d& result, const asn1SccMatrix3d& asnVal)
 
 void Matrix3d_toAsn1(asn1SccMatrix3d& result, const base::Matrix3d& baseObj)
 {
-    result.nCount = 3;
-    for (int j = 0; j < result.nCount; j++)
+
+    for (int j = 0; j < 3; j++)
     {
-        result.arr[j].nCount = 3;
-        for (int i = 0; i < result.arr[j].nCount; i++)
+        for (int i = 0; i < 3; i++)
         {
             result.arr[j].arr[i] = baseObj(i, j);
         }

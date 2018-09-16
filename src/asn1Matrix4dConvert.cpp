@@ -20,11 +20,9 @@ void Matrix4d_fromAsn1(base::Matrix4d& result, const asn1SccMatrix4d& asnVal)
 
 void Matrix4d_toAsn1(asn1SccMatrix4d& result, const base::Matrix4d& baseObj)
 {
-    result.nCount = 4;
-    for (int j = 0; j < result.nCount; j++)
+    for (int j = 0; j < 4; j++)
     {
-        result.arr[j].nCount = 4;
-        for (int i = 0; i < result.arr[j].nCount; i++)
+        for (int i = 0; i < 4; i++)
         {
             result.arr[j].arr[i] = baseObj(i, j);
         }
