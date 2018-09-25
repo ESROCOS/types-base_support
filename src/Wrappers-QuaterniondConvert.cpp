@@ -22,6 +22,7 @@ void asn1SccWrappers_Quaterniond_fromAsn1(wrappers::Quaternion<double>& result, 
 
 void asn1SccWrappers_Quaterniond_toAsn1(asn1SccWrappers_Quaterniond& result, const wrappers::Quaternion<double>& baseObj)
 {
+    result.im.nCount = 3;
     for(int i = 0; i < 3;i++)
     {
         result.im.arr[i] = baseObj.im[i];

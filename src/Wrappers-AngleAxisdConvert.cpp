@@ -24,6 +24,7 @@ void asn1SccWrappers_AngleAxisd_toAsn1(asn1SccWrappers_AngleAxisd& result, const
 {
     result.angle = baseObj.angle;
 
+    result.axis.nCount = 3;
     for(int i = 0; i < 3;i++)
     {
         result.axis.arr[i] = baseObj.axis[i];

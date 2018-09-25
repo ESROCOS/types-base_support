@@ -20,6 +20,7 @@ void asn1SccWrappers_Matrix4d_fromAsn1(wrappers::Matrix<double,4,4>& result, con
 
 void asn1SccWrappers_Matrix4d_toAsn1(asn1SccWrappers_Matrix4d& result, const wrappers::Matrix<double,4,4>& baseObj)
 {
+    result.data.nCount = 16;
     for(int i = 0; i < 16;i++)
     {
         result.data.arr[i] = baseObj.data[i];

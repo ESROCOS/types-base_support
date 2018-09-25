@@ -20,6 +20,7 @@ void asn1SccWrappers_Vector3d_fromAsn1(wrappers::Matrix<double,3,1>& result, con
 
 void asn1SccWrappers_Vector3d_toAsn1(asn1SccWrappers_Vector3d& result, const wrappers::Matrix<double,3,1>& baseObj)
 {
+    result.data.nCount = 3;
     for(int i = 0; i < 3;i++)
     {
         result.data.arr[i] = baseObj.data[i];
