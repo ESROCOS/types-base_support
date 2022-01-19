@@ -6,7 +6,7 @@
 #define BASE_JOINTTRAJECTORY_CONVERT
 
 #include "baseTypes.h"
-#include <c++/6/bits/stl_vector.h>
+#include <c++/10/bits/stl_vector.h>
 #include <vector>
 #include <base/JointState.hpp>
 #include <string.h>

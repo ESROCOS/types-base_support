@@ -6,7 +6,7 @@
 #define STD_VECTOR_WRAPPERS_VECTOR4D_CONVERT
 
 #include "baseTypes.h"
-#include <c++/6/bits/stl_vector.h>
+#include <c++/10/bits/stl_vector.h>
 #include <vector>
 #include <base/wrappers/Eigen.hpp>
 #include <string.h>
